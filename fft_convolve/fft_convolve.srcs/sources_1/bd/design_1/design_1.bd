@@ -1387,7 +1387,7 @@
       },
       "fft_convolve_0": {
         "vlnv": "user.org:user:fft_convolve:3.0",
-        "ip_revision": "4",
+        "ip_revision": "11",
         "xci_name": "design_1_fft_convolve_0_1",
         "xci_path": "ip/design_1_fft_convolve_0_1/design_1_fft_convolve_0_1.xci",
         "inst_hier_path": "fft_convolve_0",

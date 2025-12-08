@@ -4,7 +4,7 @@
     "xci_name": "design_1_fft_convolve_0_1",
     "cell_name": "fft_convolve_0",
     "component_reference": "user.org:user:fft_convolve:3.0",
-    "ip_revision": "4",
+    "ip_revision": "11",
     "gen_directory": "../../../../../../fft_convolve.gen/sources_1/bd/design_1/ip/design_1_fft_convolve_0_1",
     "parameters": {
       "component_parameters": {
@@ -39,7 +39,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "4" } ],
+        "IPREVISION": [ { "value": "11" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../fft_convolve.gen/sources_1/bd/design_1/ip/design_1_fft_convolve_0_1" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
