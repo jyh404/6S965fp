@@ -1,0 +1,45 @@
+verilog xil_defaultlib -i "../../../../../../../../../tools/Xilinx/2025.1/data/rsb/busdef" --include "/tools/Xilinx/2025.1/Vivado/data/xilinx_vip/include" --include "../../../../test_bram.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../test_bram.gen/sources_1/bd/design_1/ipshared/7711/hdl" --include "../../../../test_bram.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../test_bram.gen/sources_1/bd/design_1/ipshared/a8e4/hdl/verilog" \
+"../../../bd/design_1/ipshared/d1d4/src/xilinx_single_port_ram_read_first.v" \
+"../../../bd/design_1/ipshared/d1d4/hdl/axi_rom.v" \
+"../../../bd/design_1/ip/design_1_axi_rom_0_0/sim/design_1_axi_rom_0_0.v" \
+"../../../bd/design_1/ip/design_1_zynq_ultra_ps_e_0_1/sim/design_1_zynq_ultra_ps_e_0_1_vip_wrapper.v" \
+"../../../bd/design_1/ip/design_1_axi_smc_3/bd_0/sim/bd_ae83.v" \
+"../../../bd/design_1/ip/design_1_axi_smc_3/bd_0/ip/ip_0/sim/bd_ae83_one_0.v" \
+
+sv xil_defaultlib -i "../../../../../../../../../tools/Xilinx/2025.1/data/rsb/busdef" --include "/tools/Xilinx/2025.1/Vivado/data/xilinx_vip/include" --include "../../../../test_bram.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../test_bram.gen/sources_1/bd/design_1/ipshared/7711/hdl" --include "../../../../test_bram.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../test_bram.gen/sources_1/bd/design_1/ipshared/a8e4/hdl/verilog" \
+"../../../bd/design_1/ip/design_1_axi_smc_3/bd_0/ip/ip_2/sim/bd_ae83_s00mmu_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_3/bd_0/ip/ip_3/sim/bd_ae83_s00tr_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_3/bd_0/ip/ip_4/sim/bd_ae83_s00sic_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_3/bd_0/ip/ip_5/sim/bd_ae83_s00a2s_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_3/bd_0/ip/ip_6/sim/bd_ae83_sarn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_3/bd_0/ip/ip_7/sim/bd_ae83_srn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_3/bd_0/ip/ip_8/sim/bd_ae83_sawn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_3/bd_0/ip/ip_9/sim/bd_ae83_swn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_3/bd_0/ip/ip_10/sim/bd_ae83_sbn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_3/bd_0/ip/ip_11/sim/bd_ae83_m00s2a_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_3/bd_0/ip/ip_12/sim/bd_ae83_m00e_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_3/sim/design_1_axi_smc_3.sv" \
+
+verilog xil_defaultlib -i "../../../../../../../../../tools/Xilinx/2025.1/data/rsb/busdef" --include "/tools/Xilinx/2025.1/Vivado/data/xilinx_vip/include" --include "../../../../test_bram.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../test_bram.gen/sources_1/bd/design_1/ipshared/7711/hdl" --include "../../../../test_bram.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../test_bram.gen/sources_1/bd/design_1/ipshared/a8e4/hdl/verilog" \
+"../../../bd/design_1/ip/design_1_axi_smc_1_0/bd_0/sim/bd_a878.v" \
+"../../../bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_0/sim/bd_a878_one_0.v" \
+
+sv xil_defaultlib -i "../../../../../../../../../tools/Xilinx/2025.1/data/rsb/busdef" --include "/tools/Xilinx/2025.1/Vivado/data/xilinx_vip/include" --include "../../../../test_bram.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../test_bram.gen/sources_1/bd/design_1/ipshared/7711/hdl" --include "../../../../test_bram.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../test_bram.gen/sources_1/bd/design_1/ipshared/a8e4/hdl/verilog" \
+"../../../bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_2/sim/bd_a878_s00mmu_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_3/sim/bd_a878_s00tr_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_4/sim/bd_a878_s00sic_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_5/sim/bd_a878_s00a2s_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_6/sim/bd_a878_sawn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_7/sim/bd_a878_swn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_8/sim/bd_a878_sbn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_9/sim/bd_a878_m00s2a_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_10/sim/bd_a878_m00e_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1_0/sim/design_1_axi_smc_1_0.sv" \
+
+verilog xil_defaultlib -i "../../../../../../../../../tools/Xilinx/2025.1/data/rsb/busdef" --include "/tools/Xilinx/2025.1/Vivado/data/xilinx_vip/include" --include "../../../../test_bram.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../test_bram.gen/sources_1/bd/design_1/ipshared/7711/hdl" --include "../../../../test_bram.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../test_bram.gen/sources_1/bd/design_1/ipshared/a8e4/hdl/verilog" \
+"../../../bd/design_1/sim/design_1.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
