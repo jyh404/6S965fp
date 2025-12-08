@@ -51,10 +51,10 @@
 						"BREADY": { "actual": "m_axi_s2mm_bready"},
 						"BRESP": { "actual": "m_axi_s2mm_bresp[1:0]"},
 						"BVALID": { "actual": "m_axi_s2mm_bvalid"},
-						"WDATA": { "actual": "m_axi_s2mm_wdata[31:0]"},
+						"WDATA": { "actual": "m_axi_s2mm_wdata[63:0]"},
 						"WLAST": { "actual": "m_axi_s2mm_wlast"},
 						"WREADY": { "actual": "m_axi_s2mm_wready"},
-						"WSTRB": { "actual": "m_axi_s2mm_wstrb[3:0]"},
+						"WSTRB": { "actual": "m_axi_s2mm_wstrb[7:0]"},
 						"WVALID": { "actual": "m_axi_s2mm_wvalid"}
 					}
 				},
@@ -63,8 +63,8 @@
 					"ports": {
 						"ACLK": { "actual": "m_axi_s2mm_aclk"},
 						"ARESETN": { "actual": "s2mm_prmry_reset_out_n"},
-						"TDATA": { "actual": "s_axis_s2mm_tdata[31:0]"},
-						"TKEEP": { "actual": "s_axis_s2mm_tkeep[3:0]"},
+						"TDATA": { "actual": "s_axis_s2mm_tdata[63:0]"},
+						"TKEEP": { "actual": "s_axis_s2mm_tkeep[7:0]"},
 						"TLAST": { "actual": "s_axis_s2mm_tlast"},
 						"TREADY": { "actual": "s_axis_s2mm_tready"},
 						"TVALID": { "actual": "s_axis_s2mm_tvalid"}
@@ -98,8 +98,8 @@
 					"ports": {
 						"ACLK": { "actual": "m_axi_mm2s_aclk"},
 						"ARESETN": { "actual": "mm2s_prmry_reset_out_n"},
-						"TDATA": { "actual": "m_axis_mm2s_tdata[15:0]"},
-						"TKEEP": { "actual": "m_axis_mm2s_tkeep[1:0]"},
+						"TDATA": { "actual": "m_axis_mm2s_tdata[7:0]"},
+						"TKEEP": { "actual": "m_axis_mm2s_tkeep[0:0]"},
 						"TLAST": { "actual": "m_axis_mm2s_tlast"},
 						"TREADY": { "actual": "m_axis_mm2s_tready"},
 						"TVALID": { "actual": "m_axis_mm2s_tvalid"}
@@ -365,10 +365,10 @@
 						"BREADY": { "actual": "S01_AXI_bready"},
 						"BRESP": { "actual": "S01_AXI_bresp[1:0]"},
 						"BVALID": { "actual": "S01_AXI_bvalid"},
-						"WDATA": { "actual": "S01_AXI_wdata[31:0]"},
+						"WDATA": { "actual": "S01_AXI_wdata[63:0]"},
 						"WLAST": { "actual": "S01_AXI_wlast"},
 						"WREADY": { "actual": "S01_AXI_wready"},
-						"WSTRB": { "actual": "S01_AXI_wstrb[3:0]"},
+						"WSTRB": { "actual": "S01_AXI_wstrb[7:0]"},
 						"WVALID": { "actual": "S01_AXI_wvalid"}
 					}
 				},
@@ -397,7 +397,7 @@
 					"interface": "xilinx.com:interface:axis:1.0",
 					"ports": {
 						"ACLK": { "actual": "aclk"},
-						"TDATA": { "actual": "m_axis_data_tdata[31:0]"},
+						"TDATA": { "actual": "m_axis_data_tdata[63:0]"},
 						"TLAST": { "actual": "m_axis_data_tlast"},
 						"TREADY": { "actual": "m_axis_data_tready"},
 						"TVALID": { "actual": "m_axis_data_tvalid"}
@@ -407,7 +407,7 @@
 					"interface": "xilinx.com:interface:axis:1.0",
 					"ports": {
 						"ACLK": { "actual": "aclk"},
-						"TDATA": { "actual": "s_axis_config_tdata[15:0]"},
+						"TDATA": { "actual": "s_axis_config_tdata[7:0]"},
 						"TREADY": { "actual": "s_axis_config_tready"},
 						"TVALID": { "actual": "s_axis_config_tvalid"}
 					}
