@@ -1,7 +1,7 @@
 onbreak {quit -f}
 onerror {quit -f}
 
-vsim -voptargs="+acc"  -L xil_defaultlib -L xilinx_vip -L xpm -L axi_infrastructure_v1_1_0 -L axi_vip_v1_1_21 -L zynq_ultra_ps_e_vip_v1_0_21 -L proc_sys_reset_v5_0_17 -L xlconstant_v1_1_10 -L smartconnect_v1_0 -L axi_register_slice_v2_1_35 -L xbip_utils_v3_0_14 -L axi_utils_v2_0_10 -L c_reg_fd_v12_0_10 -L xbip_dsp48_wrapper_v3_0_7 -L xbip_pipe_v3_0_10 -L c_addsub_v12_0_20 -L c_shift_ram_v12_0_19 -L mult_gen_v12_0_23 -L floating_point_v7_1_20 -L cmpy_v6_0_26 -L xfft_v9_1_14 -L axi_datamover_v5_1_37 -L axi_sg_v4_1_21 -L axi_dma_v7_1_36 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -lib xil_defaultlib xil_defaultlib.design_1 xil_defaultlib.glbl
+vsim -voptargs="+acc"  -L xil_defaultlib -L xilinx_vip -L xpm -L axi_infrastructure_v1_1_0 -L axi_vip_v1_1_21 -L zynq_ultra_ps_e_vip_v1_0_21 -L xbip_utils_v3_0_14 -L axi_utils_v2_0_10 -L c_reg_fd_v12_0_10 -L xbip_dsp48_wrapper_v3_0_7 -L xbip_pipe_v3_0_10 -L c_addsub_v12_0_20 -L c_shift_ram_v12_0_19 -L mult_gen_v12_0_23 -L floating_point_v7_1_20 -L cmpy_v6_0_26 -L xfft_v9_1_14 -L axi_datamover_v5_1_37 -L axi_sg_v4_1_21 -L axi_dma_v7_1_36 -L xlconstant_v1_1_10 -L proc_sys_reset_v5_0_17 -L smartconnect_v1_0 -L axi_register_slice_v2_1_35 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -lib xil_defaultlib xil_defaultlib.design_1 xil_defaultlib.glbl
 
 set NumericStdNoWarnings 1
 set StdArithNoWarnings 1
