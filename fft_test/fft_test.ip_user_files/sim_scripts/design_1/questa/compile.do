@@ -133,6 +133,9 @@ vcom -work xfft_v9_1_14 -64 -93  \
 vcom -work xil_defaultlib -64 -93  \
 "../../../bd/design_1/ip/design_1_xfft_0_1/sim/design_1_xfft_0_1.vhd" \
 
+vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../fft_test.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../fft_test.gen/sources_1/bd/design_1/ipshared/7711/hdl" "+incdir+../../../../fft_test.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../fft_test.gen/sources_1/bd/design_1/ipshared/a8e4/hdl/verilog" "+incdir+../../../../../../../../../../tools/Xilinx/2025.1/data/rsb/busdef" "+incdir+/tools/Xilinx/2025.1/Vivado/data/xilinx_vip/include" \
+"../../../bd/design_1/ip/design_1_axi_smc_2/bd_0/sim/bd_6e42.v" \
+
 vlog -work xlconstant_v1_1_10 -64 -incr -mfcu  "+incdir+../../../../fft_test.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../fft_test.gen/sources_1/bd/design_1/ipshared/7711/hdl" "+incdir+../../../../fft_test.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../fft_test.gen/sources_1/bd/design_1/ipshared/a8e4/hdl/verilog" "+incdir+../../../../../../../../../../tools/Xilinx/2025.1/data/rsb/busdef" "+incdir+/tools/Xilinx/2025.1/Vivado/data/xilinx_vip/include" \
 "../../../../fft_test.gen/sources_1/bd/design_1/ipshared/a165/hdl/xlconstant_v1_1_vl_rfs.v" \
 
@@ -233,9 +236,6 @@ vlog -work xil_defaultlib -64 -incr -mfcu  -sv -L axi_vip_v1_1_21 -L smartconnec
 "../../../bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_47/sim/bd_6e42_m01bn_0.sv" \
 "../../../bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_48/sim/bd_6e42_m01e_0.sv" \
 
-vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../fft_test.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../fft_test.gen/sources_1/bd/design_1/ipshared/7711/hdl" "+incdir+../../../../fft_test.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../fft_test.gen/sources_1/bd/design_1/ipshared/a8e4/hdl/verilog" "+incdir+../../../../../../../../../../tools/Xilinx/2025.1/data/rsb/busdef" "+incdir+/tools/Xilinx/2025.1/Vivado/data/xilinx_vip/include" \
-"../../../bd/design_1/ip/design_1_axi_smc_2/bd_0/sim/bd_6e42.v" \
-
 vlog -work axi_register_slice_v2_1_35 -64 -incr -mfcu  "+incdir+../../../../fft_test.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../fft_test.gen/sources_1/bd/design_1/ipshared/7711/hdl" "+incdir+../../../../fft_test.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../fft_test.gen/sources_1/bd/design_1/ipshared/a8e4/hdl/verilog" "+incdir+../../../../../../../../../../tools/Xilinx/2025.1/data/rsb/busdef" "+incdir+/tools/Xilinx/2025.1/Vivado/data/xilinx_vip/include" \
 "../../../../fft_test.gen/sources_1/bd/design_1/ipshared/c5b7/hdl/axi_register_slice_v2_1_vl_rfs.v" \
 
@@ -246,6 +246,7 @@ vcom -work xil_defaultlib -64 -93  \
 "../../../bd/design_1/ip/design_1_rst_ps8_0_99M_1/sim/design_1_rst_ps8_0_99M_1.vhd" \
 
 vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../fft_test.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../fft_test.gen/sources_1/bd/design_1/ipshared/7711/hdl" "+incdir+../../../../fft_test.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../fft_test.gen/sources_1/bd/design_1/ipshared/a8e4/hdl/verilog" "+incdir+../../../../../../../../../../tools/Xilinx/2025.1/data/rsb/busdef" "+incdir+/tools/Xilinx/2025.1/Vivado/data/xilinx_vip/include" \
+"../../../bd/design_1/ip/design_1_axi_smc_1_1/bd_0/sim/bd_68b9.v" \
 "../../../bd/design_1/ip/design_1_axi_smc_1_1/bd_0/ip/ip_0/sim/bd_68b9_one_0.v" \
 
 vcom -work xil_defaultlib -64 -93  \
@@ -283,18 +284,13 @@ vlog -work xil_defaultlib -64 -incr -mfcu  -sv -L axi_vip_v1_1_21 -L smartconnec
 "../../../bd/design_1/ip/design_1_axi_smc_1_1/bd_0/ip/ip_30/sim/bd_68b9_m00wn_0.sv" \
 "../../../bd/design_1/ip/design_1_axi_smc_1_1/bd_0/ip/ip_31/sim/bd_68b9_m00bn_0.sv" \
 "../../../bd/design_1/ip/design_1_axi_smc_1_1/bd_0/ip/ip_32/sim/bd_68b9_m00e_0.sv" \
-
-vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../fft_test.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../fft_test.gen/sources_1/bd/design_1/ipshared/7711/hdl" "+incdir+../../../../fft_test.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../fft_test.gen/sources_1/bd/design_1/ipshared/a8e4/hdl/verilog" "+incdir+../../../../../../../../../../tools/Xilinx/2025.1/data/rsb/busdef" "+incdir+/tools/Xilinx/2025.1/Vivado/data/xilinx_vip/include" \
-"../../../bd/design_1/ip/design_1_axi_smc_1_1/bd_0/sim/bd_68b9.v" \
-
-vlog -work xil_defaultlib -64 -incr -mfcu  -sv -L axi_vip_v1_1_21 -L smartconnect_v1_0 -L zynq_ultra_ps_e_vip_v1_0_21 -L xilinx_vip "+incdir+../../../../fft_test.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../fft_test.gen/sources_1/bd/design_1/ipshared/7711/hdl" "+incdir+../../../../fft_test.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../fft_test.gen/sources_1/bd/design_1/ipshared/a8e4/hdl/verilog" "+incdir+../../../../../../../../../../tools/Xilinx/2025.1/data/rsb/busdef" "+incdir+/tools/Xilinx/2025.1/Vivado/data/xilinx_vip/include" \
 "../../../bd/design_1/ip/design_1_axi_smc_1_1/sim/design_1_axi_smc_1_1.sv" \
-
-vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../fft_test.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../fft_test.gen/sources_1/bd/design_1/ipshared/7711/hdl" "+incdir+../../../../fft_test.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../fft_test.gen/sources_1/bd/design_1/ipshared/a8e4/hdl/verilog" "+incdir+../../../../../../../../../../tools/Xilinx/2025.1/data/rsb/busdef" "+incdir+/tools/Xilinx/2025.1/Vivado/data/xilinx_vip/include" \
-"../../../bd/design_1/sim/design_1.v" \
 
 vcom -work xil_defaultlib -64 -93  \
 "../../../bd/design_1/ip/design_1_axi_dma_1_0/sim/design_1_axi_dma_1_0.vhd" \
+
+vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../fft_test.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../fft_test.gen/sources_1/bd/design_1/ipshared/7711/hdl" "+incdir+../../../../fft_test.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../fft_test.gen/sources_1/bd/design_1/ipshared/a8e4/hdl/verilog" "+incdir+../../../../../../../../../../tools/Xilinx/2025.1/data/rsb/busdef" "+incdir+/tools/Xilinx/2025.1/Vivado/data/xilinx_vip/include" \
+"../../../bd/design_1/sim/design_1.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

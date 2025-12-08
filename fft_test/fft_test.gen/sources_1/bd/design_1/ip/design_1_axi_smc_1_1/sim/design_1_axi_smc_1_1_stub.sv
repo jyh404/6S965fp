@@ -78,7 +78,7 @@ module design_1_axi_smc_1_1 (
   input bit [3 : 0] S00_AXI_arqos,
   input bit_as_bool S00_AXI_arvalid,
   output bit_as_bool S00_AXI_arready,
-  output bit [31 : 0] S00_AXI_rdata,
+  output bit [63 : 0] S00_AXI_rdata,
   output bit [1 : 0] S00_AXI_rresp,
   output bit_as_bool S00_AXI_rlast,
   output bit_as_bool S00_AXI_rvalid,
@@ -93,8 +93,8 @@ module design_1_axi_smc_1_1 (
   input bit [3 : 0] S01_AXI_awqos,
   input bit_as_bool S01_AXI_awvalid,
   output bit_as_bool S01_AXI_awready,
-  input bit [31 : 0] S01_AXI_wdata,
-  input bit [3 : 0] S01_AXI_wstrb,
+  input bit [63 : 0] S01_AXI_wdata,
+  input bit [7 : 0] S01_AXI_wstrb,
   input bit_as_bool S01_AXI_wlast,
   input bit_as_bool S01_AXI_wvalid,
   output bit_as_bool S01_AXI_wready,
@@ -188,7 +188,7 @@ module design_1_axi_smc_1_1 (aclk,aresetn,S00_AXI_araddr,S00_AXI_arlen,S00_AXI_a
   input bit [3 : 0] S00_AXI_arqos;
   input bit S00_AXI_arvalid;
   output wire S00_AXI_arready;
-  output wire [31 : 0] S00_AXI_rdata;
+  output wire [63 : 0] S00_AXI_rdata;
   output wire [1 : 0] S00_AXI_rresp;
   output wire S00_AXI_rlast;
   output wire S00_AXI_rvalid;
@@ -203,8 +203,8 @@ module design_1_axi_smc_1_1 (aclk,aresetn,S00_AXI_araddr,S00_AXI_arlen,S00_AXI_a
   input bit [3 : 0] S01_AXI_awqos;
   input bit S01_AXI_awvalid;
   output wire S01_AXI_awready;
-  input bit [31 : 0] S01_AXI_wdata;
-  input bit [3 : 0] S01_AXI_wstrb;
+  input bit [63 : 0] S01_AXI_wdata;
+  input bit [7 : 0] S01_AXI_wstrb;
   input bit S01_AXI_wlast;
   input bit S01_AXI_wvalid;
   output wire S01_AXI_wready;

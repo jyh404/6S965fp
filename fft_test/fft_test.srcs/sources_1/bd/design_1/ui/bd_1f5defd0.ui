@@ -1,33 +1,33 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.682381",
-   "Default View_TopLeft":"-56,-1757",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-431,-1473",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
 #  -string -flagsOSRD
-preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 3 -x 1130 -y -640 -defaultsOSRD
-preplace inst axi_dma_0 -pg 1 -lvl 2 -x 600 -y -640 -defaultsOSRD
-preplace inst xfft_0 -pg 1 -lvl 1 -x 210 -y -640 -defaultsOSRD
-preplace inst axi_smc -pg 1 -lvl 5 -x 2000 -y -700 -defaultsOSRD
-preplace inst rst_ps8_0_99M -pg 1 -lvl 4 -x 1630 -y -610 -defaultsOSRD
-preplace inst axi_smc_1 -pg 1 -lvl 5 -x 2000 -y -470 -defaultsOSRD
-preplace inst axi_dma_1 -pg 1 -lvl 2 -x 600 -y -920 -defaultsOSRD
-preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 5 20 -760 400 -760 790 -750 1440 -720 1820
-preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 3 1 1450 -630n
-preplace netloc rst_ps8_0_99M_peripheral_aresetn 1 1 4 420 -770 810J -760 NJ -760 1830
-preplace netloc axi_dma_0_M_AXIS_MM2S 1 0 3 10 -810 NJ -810 770
-preplace netloc xfft_0_M_AXIS_DATA 1 1 1 390 -700n
-preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_FPD 1 3 2 1430 -730 NJ
-preplace netloc axi_smc_M00_AXI 1 1 5 430 -790 NJ -790 NJ -790 NJ -790 2140
-preplace netloc axi_dma_0_M_AXI_MM2S 1 2 3 800J -810 NJ -810 1810
-preplace netloc axi_smc_1_M00_AXI 1 2 4 830 -770 NJ -770 1820J -810 2160
-preplace netloc axi_dma_0_M_AXI_S2MM 1 2 3 820J -800 NJ -800 1840
-preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM1_FPD 1 3 2 1450J -710 N
-preplace netloc axi_dma_1_M_AXIS_MM2S 1 0 3 30 -800 NJ -800 780
-preplace netloc axi_dma_1_M_AXI_MM2S 1 2 3 NJ -950 NJ -950 1860
-preplace netloc axi_smc_M01_AXI 1 1 5 410 -780 NJ -780 NJ -780 1850J -800 2150
-levelinfo -pg 1 -300 210 600 1130 1630 2000 2180
-pagesize -pg 1 -db -bbox -sgen -300 -1800 2210 180
+preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 3 -x 1150 -y -640 -defaultsOSRD
+preplace inst axi_dma_0 -pg 1 -lvl 2 -x 610 -y -590 -defaultsOSRD
+preplace inst xfft_0 -pg 1 -lvl 1 -x 210 -y -600 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 5 -x 2020 -y -700 -defaultsOSRD
+preplace inst rst_ps8_0_99M -pg 1 -lvl 4 -x 1650 -y -610 -defaultsOSRD
+preplace inst axi_smc_1 -pg 1 -lvl 5 -x 2020 -y -470 -defaultsOSRD
+preplace inst axi_dma_1 -pg 1 -lvl 2 -x 610 -y -920 -defaultsOSRD
+preplace netloc rst_ps8_0_99M_peripheral_aresetn 1 1 4 430 -720 800J -760 NJ -760 1850
+preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 5 30 -720 410 -710 840 -750 1460 -720 1840
+preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 3 1 1470 -630n
+preplace netloc axi_dma_0_M_AXIS_MM2S 1 0 3 20 -730 NJ -730 780
+preplace netloc axi_dma_0_M_AXI_MM2S 1 2 3 790J -810 NJ -810 1830
+preplace netloc axi_dma_0_M_AXI_S2MM 1 2 3 810J -790 NJ -790 1860
+preplace netloc axi_dma_1_M_AXIS_MM2S 1 0 3 10 -810 NJ -810 780
+preplace netloc axi_dma_1_M_AXI_MM2S 1 2 3 NJ -950 NJ -950 1880
+preplace netloc axi_smc_1_M00_AXI 1 2 4 850 -770 NJ -770 1840J -810 2180
+preplace netloc axi_smc_M00_AXI 1 1 5 440 -800 NJ -800 NJ -800 NJ -800 2160
+preplace netloc axi_smc_M01_AXI 1 1 5 420 -780 NJ -780 NJ -780 1870J -790 2170
+preplace netloc xfft_0_M_AXIS_DATA 1 1 1 390 -660n
+preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_FPD 1 3 2 1450 -730 NJ
+preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM1_FPD 1 3 2 1470J -710 N
+levelinfo -pg 1 -300 210 610 1150 1650 2020 2200
+pagesize -pg 1 -db -bbox -sgen -300 -1800 2260 180
 "
 }
 {

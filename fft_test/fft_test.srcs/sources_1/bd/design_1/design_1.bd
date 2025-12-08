@@ -970,6 +970,18 @@
           "c_include_sg": {
             "value": "0"
           },
+          "c_m_axi_mm2s_data_width": {
+            "value": "64"
+          },
+          "c_m_axi_s2mm_data_width": {
+            "value": "64"
+          },
+          "c_m_axis_mm2s_tdata_width": {
+            "value": "64"
+          },
+          "c_s_axis_s2mm_tdata_width": {
+            "value": "64"
+          },
           "c_sg_length_width": {
             "value": "23"
           }
@@ -1032,11 +1044,17 @@
           "implementation_options": {
             "value": "automatically_select"
           },
+          "input_width": {
+            "value": "32"
+          },
           "number_of_stages_using_block_ram_for_data_and_phase_factors": {
             "value": "6"
           },
           "output_ordering": {
             "value": "natural_order"
+          },
+          "phase_factor_width": {
+            "value": "32"
           },
           "super_sample_rates": {
             "value": "1"
@@ -1317,7 +1335,7 @@
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
             "parameters": {
               "MAX_BURST_LENGTH": {
-                "value": "4"
+                "value": "8"
               },
               "NUM_READ_OUTSTANDING": {
                 "value": "16"
