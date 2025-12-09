@@ -2,10 +2,10 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
--- Date        : Tue Dec  9 11:13:54 2025
--- Host        : eecs-digital-44 running 64-bit Ubuntu 24.04.3 LTS
--- Command     : write_vhdl -force -mode synth_stub
---               /home/aloy_ng/proj/6S965fp/iq_collection_framer/iq_collection_framer.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_stub.vhdl
+-- Date        : Tue Dec  9 13:38:35 2025
+-- Host        : eecs-digital-35 running 64-bit Ubuntu 24.04.3 LTS
+-- Command     : write_vhdl -force -mode synth_stub -rename_top design_1_clk_wiz_0_0 -prefix
+--               design_1_clk_wiz_0_0_ design_1_clk_wiz_0_0_stub.vhdl
 -- Design      : design_1_clk_wiz_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xczu48dr-ffvg1517-2-e

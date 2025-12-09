@@ -2,8 +2,8 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-//Date        : Tue Dec  9 12:02:14 2025
-//Host        : eecs-digital-44 running 64-bit Ubuntu 24.04.3 LTS
+//Date        : Tue Dec  9 13:37:54 2025
+//Host        : eecs-digital-35 running 64-bit Ubuntu 24.04.3 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
 //Purpose     : IP block netlist
@@ -443,13 +443,13 @@ module design_1
         .s00_axis_aresetn(proc_sys_reset_0_150_mb_reset),
         .s00_axis_tdata(cic_compiler_1_M_AXIS_DATA_TDATA),
         .s00_axis_tlast(1'b0),
-        .s00_axis_tstrb({1'b1,1'b1,1'b1,1'b1}),
+        .s00_axis_tstrb({1'b1,1'b1}),
         .s00_axis_tvalid(cic_compiler_1_M_AXIS_DATA_TVALID),
         .s01_axis_aclk(clk_wiz_0_clk_out1),
         .s01_axis_aresetn(proc_sys_reset_0_150_mb_reset),
         .s01_axis_tdata(cic_compiler_2_M_AXIS_DATA_TDATA),
         .s01_axis_tlast(1'b0),
-        .s01_axis_tstrb({1'b1,1'b1,1'b1,1'b1}),
+        .s01_axis_tstrb({1'b1,1'b1}),
         .s01_axis_tvalid(cic_compiler_2_M_AXIS_DATA_TVALID),
         .trigger(ilslice_0_Dout));
   design_1_proc_sys_reset_0_0 proc_sys_reset_0_150

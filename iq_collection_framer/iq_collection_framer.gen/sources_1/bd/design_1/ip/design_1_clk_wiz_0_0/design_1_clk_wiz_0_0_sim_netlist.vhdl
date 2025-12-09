@@ -2,10 +2,10 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
--- Date        : Tue Dec  9 11:13:54 2025
--- Host        : eecs-digital-44 running 64-bit Ubuntu 24.04.3 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/aloy_ng/proj/6S965fp/iq_collection_framer/iq_collection_framer.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_sim_netlist.vhdl
+-- Date        : Tue Dec  9 13:38:35 2025
+-- Host        : eecs-digital-35 running 64-bit Ubuntu 24.04.3 LTS
+-- Command     : write_vhdl -force -mode funcsim -rename_top design_1_clk_wiz_0_0 -prefix
+--               design_1_clk_wiz_0_0_ design_1_clk_wiz_0_0_sim_netlist.vhdl
 -- Design      : design_1_clk_wiz_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -15,14 +15,14 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity design_1_clk_wiz_0_0_clk_wiz is
+entity design_1_clk_wiz_0_0_design_1_clk_wiz_0_0_clk_wiz is
   port (
     clk_out1 : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
-end design_1_clk_wiz_0_0_clk_wiz;
+end design_1_clk_wiz_0_0_design_1_clk_wiz_0_0_clk_wiz;
 
-architecture STRUCTURE of design_1_clk_wiz_0_0_clk_wiz is
+architecture STRUCTURE of design_1_clk_wiz_0_0_design_1_clk_wiz_0_0_clk_wiz is
   signal clk_in1_design_1_clk_wiz_0_0 : STD_LOGIC;
   signal clk_out1_design_1_clk_wiz_0_0 : STD_LOGIC;
   signal NLW_mmcme4_adv_inst_CDDCDONE_UNCONNECTED : STD_LOGIC;
@@ -187,7 +187,7 @@ end design_1_clk_wiz_0_0;
 
 architecture STRUCTURE of design_1_clk_wiz_0_0 is
 begin
-inst: entity work.design_1_clk_wiz_0_0_clk_wiz
+inst: entity work.design_1_clk_wiz_0_0_design_1_clk_wiz_0_0_clk_wiz
      port map (
       clk_in1 => clk_in1,
       clk_out1 => clk_out1

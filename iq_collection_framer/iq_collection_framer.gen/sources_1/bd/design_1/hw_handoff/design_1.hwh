@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Dec  9 12:02:18 2025" VIVADOVERSION="2025.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Dec  9 13:37:57 2025" VIVADOVERSION="2025.1">
 
   <SYSTEMINFO ARCH="zynquplusRFSOC" BOARD="realdigital.org:rfsoc4x2:part0:1.0" DEVICE="xczu48dr" NAME="design_1" PACKAGE="ffvg1517" SPEEDGRADE="-2"/>
 
@@ -3491,13 +3491,13 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="6" FULLNAME="/iq_trigger_framer_0" HWVERSION="1.0" INSTANCE="iq_trigger_framer_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="iq_trigger_framer" VLNV="user.org:user:iq_trigger_framer:1.0">
+    <MODULE COREREVISION="5" FULLNAME="/iq_trigger_framer_0" HWVERSION="1.0" INSTANCE="iq_trigger_framer_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="iq_trigger_framer" VLNV="user.org:user:iq_trigger_framer:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="C_M00_AXIS_START_COUNT" VALUE="32"/>
         <PARAMETER NAME="C_M00_AXIS_TDATA_WIDTH" VALUE="32"/>
-        <PARAMETER NAME="C_S00_AXIS_TDATA_WIDTH" VALUE="32"/>
-        <PARAMETER NAME="C_S01_AXIS_TDATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_S00_AXIS_TDATA_WIDTH" VALUE="16"/>
+        <PARAMETER NAME="C_S01_AXIS_TDATA_WIDTH" VALUE="16"/>
         <PARAMETER NAME="N" VALUE="4096"/>
         <PARAMETER NAME="Component_Name" VALUE="design_1_iq_trigger_framer_0_1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>

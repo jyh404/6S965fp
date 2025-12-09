@@ -1,7 +1,7 @@
 
 `timescale 1 ns / 1 ps
 
-	module iq_framer #
+	module iq_trigger_framer #
 	(
 		// Users to add parameters here
 
@@ -63,6 +63,9 @@
 	// remember we are doing Verilog...
 	// assume s00_axis and s01_axis are synced: we clock off s00_axis_aclk
 	
+	reg [15:0] valid_counter;
+	reg [2:0] state;
+	
 	// we only have valid downstraem data when we are in sending state
 	assign m00_axis_tvalid = (state == 2'b01) ? s00_axis_tvalid : 1'b0;
 	assign m00_axis_tdata = {s01_axis_tdata, s00_axis_tdata};
@@ -72,9 +75,6 @@
 	// always ready upstream
 	assign s00_axis_tready = 1'b1;
 	assign s01_axis_tready = 1'b1;
-	
-	reg [15:0] valid_counter;
-	reg [2:0] state;
 	// 0: idle, waiting for trigger
 	// 1: trigger seen, waiting for N transactions
 	// 2: waiting for trigger to go low again

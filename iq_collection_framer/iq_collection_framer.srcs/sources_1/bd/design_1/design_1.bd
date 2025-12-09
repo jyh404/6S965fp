@@ -1505,7 +1505,7 @@
       },
       "iq_trigger_framer_0": {
         "vlnv": "user.org:user:iq_trigger_framer:1.0",
-        "ip_revision": "6",
+        "ip_revision": "5",
         "xci_name": "design_1_iq_trigger_framer_0_1",
         "xci_path": "ip/design_1_iq_trigger_framer_0_1/design_1_iq_trigger_framer_0_1.xci",
         "inst_hier_path": "iq_trigger_framer_0",
