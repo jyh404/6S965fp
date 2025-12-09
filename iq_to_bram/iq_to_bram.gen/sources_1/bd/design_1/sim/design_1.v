@@ -2,7 +2,7 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-//Date        : Mon Dec  8 20:51:48 2025
+//Date        : Mon Dec  8 22:32:23 2025
 //Host        : eecs-digital-44 running 64-bit Ubuntu 24.04.3 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -10,7 +10,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=12,numReposBlks=12,numNonXlnxBlks=1,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=5,da_clkrst_cnt=5,da_rf_converter_usp_cnt=1,da_zynq_ultra_ps_e_cnt=1,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=14,numReposBlks=14,numNonXlnxBlks=2,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=5,da_clkrst_cnt=18,da_rf_converter_usp_cnt=1,da_zynq_ultra_ps_e_cnt=1,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (adc2_clk_clk_n,
     adc2_clk_clk_p,
@@ -27,6 +27,7 @@ module design_1
   (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 vin2_01 V_N" *) (* X_INTERFACE_MODE = "Slave" *) input vin2_01_v_n;
   (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 vin2_01 V_P" *) input vin2_01_v_p;
 
+  wire [0:0]Net;
   wire adc2_clk_clk_n;
   wire adc2_clk_clk_p;
   wire [31:0]axi_dma_0_M_AXI_S2MM_AWADDR;
@@ -100,16 +101,16 @@ module design_1
   wire axis_data_fifo_0_M_AXIS_TLAST;
   wire axis_data_fifo_0_M_AXIS_TREADY;
   wire axis_data_fifo_0_M_AXIS_TVALID;
-  wire [15:0]cic_compiler_1_M_AXIS_DATA_TDATA;
-  wire cic_compiler_1_M_AXIS_DATA_TVALID;
-  wire [15:0]cic_compiler_2_M_AXIS_DATA_TDATA;
-  wire cic_compiler_2_M_AXIS_DATA_TVALID;
+  wire [15:0]cic_compiler_imag_M_AXIS_DATA_TDATA;
+  wire cic_compiler_imag_M_AXIS_DATA_TVALID;
+  wire [15:0]cic_compiler_real_M_AXIS_DATA_TDATA;
+  wire cic_compiler_real_M_AXIS_DATA_TVALID;
   wire clk_wiz_0_clk_out1;
-  wire [31:0]iq_framer_0_M00_AXIS_TDATA;
-  wire iq_framer_0_M00_AXIS_TLAST;
-  wire iq_framer_0_M00_AXIS_TREADY;
-  wire [3:0]iq_framer_0_M00_AXIS_TSTRB;
-  wire iq_framer_0_M00_AXIS_TVALID;
+  wire [31:0]iq_trigger_framer_0_M00_AXIS_TDATA;
+  wire iq_trigger_framer_0_M00_AXIS_TLAST;
+  wire iq_trigger_framer_0_M00_AXIS_TREADY;
+  wire [3:0]iq_trigger_framer_0_M00_AXIS_TSTRB;
+  wire iq_trigger_framer_0_M00_AXIS_TVALID;
   wire [0:0]proc_sys_reset_0_150_mb_reset;
   wire [0:0]proc_sys_reset_0_150_peripheral_aresetn;
   wire [3:0]sw;
@@ -246,6 +247,17 @@ module design_1
         .s_axis_s2mm_tlast(axis_data_fifo_0_M_AXIS_TLAST),
         .s_axis_s2mm_tready(axis_data_fifo_0_M_AXIS_TREADY),
         .s_axis_s2mm_tvalid(axis_data_fifo_0_M_AXIS_TVALID));
+  design_1_axi_ram_0_0 axi_ram_0
+       (.m00_axis_aclk(zynq_ultra_ps_e_0_pl_clk0),
+        .m00_axis_aresetn(proc_sys_reset_0_150_peripheral_aresetn),
+        .m00_axis_tready(1'b1),
+        .s00_axis_aclk(zynq_ultra_ps_e_0_pl_clk0),
+        .s00_axis_aresetn(proc_sys_reset_0_150_peripheral_aresetn),
+        .s00_axis_tdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .s00_axis_tlast(1'b0),
+        .s00_axis_tstrb({1'b1,1'b1,1'b1,1'b1}),
+        .s00_axis_tvalid(1'b0),
+        .trigger(Net));
   design_1_axi_smc_0 axi_smc
        (.M00_AXI_araddr(axi_smc_M00_AXI_ARADDR),
         .M00_AXI_arready(axi_smc_M00_AXI_ARREADY),
@@ -406,50 +418,51 @@ module design_1
         .m_axis_tready(axis_data_fifo_0_M_AXIS_TREADY),
         .m_axis_tvalid(axis_data_fifo_0_M_AXIS_TVALID),
         .s_axis_aclk(clk_wiz_0_clk_out1),
-        .s_axis_aresetn(proc_sys_reset_0_150_mb_reset),
-        .s_axis_tdata(iq_framer_0_M00_AXIS_TDATA),
-        .s_axis_tlast(iq_framer_0_M00_AXIS_TLAST),
-        .s_axis_tready(iq_framer_0_M00_AXIS_TREADY),
-        .s_axis_tstrb(iq_framer_0_M00_AXIS_TSTRB),
-        .s_axis_tvalid(iq_framer_0_M00_AXIS_TVALID));
-  design_1_cic_compiler_1_0 cic_compiler_1
+        .s_axis_aresetn(1'b0),
+        .s_axis_tdata(iq_trigger_framer_0_M00_AXIS_TDATA),
+        .s_axis_tlast(iq_trigger_framer_0_M00_AXIS_TLAST),
+        .s_axis_tready(iq_trigger_framer_0_M00_AXIS_TREADY),
+        .s_axis_tstrb(iq_trigger_framer_0_M00_AXIS_TSTRB),
+        .s_axis_tvalid(iq_trigger_framer_0_M00_AXIS_TVALID));
+  design_1_cic_compiler_1_1 cic_compiler_imag
        (.aclk(clk_wiz_0_clk_out1),
-        .m_axis_data_tdata(cic_compiler_1_M_AXIS_DATA_TDATA),
-        .m_axis_data_tvalid(cic_compiler_1_M_AXIS_DATA_TVALID),
-        .s_axis_data_tdata(usp_rf_data_converter_0_m20_axis_TDATA),
-        .s_axis_data_tready(usp_rf_data_converter_0_m20_axis_TREADY),
-        .s_axis_data_tvalid(usp_rf_data_converter_0_m20_axis_TVALID));
-  design_1_cic_compiler_1_1 cic_compiler_2
-       (.aclk(clk_wiz_0_clk_out1),
-        .m_axis_data_tdata(cic_compiler_2_M_AXIS_DATA_TDATA),
-        .m_axis_data_tvalid(cic_compiler_2_M_AXIS_DATA_TVALID),
+        .m_axis_data_tdata(cic_compiler_imag_M_AXIS_DATA_TDATA),
+        .m_axis_data_tvalid(cic_compiler_imag_M_AXIS_DATA_TVALID),
         .s_axis_data_tdata(usp_rf_data_converter_0_m21_axis_TDATA),
         .s_axis_data_tready(usp_rf_data_converter_0_m21_axis_TREADY),
         .s_axis_data_tvalid(usp_rf_data_converter_0_m21_axis_TVALID));
+  design_1_cic_compiler_1_0 cic_compiler_real
+       (.aclk(clk_wiz_0_clk_out1),
+        .m_axis_data_tdata(cic_compiler_real_M_AXIS_DATA_TDATA),
+        .m_axis_data_tvalid(cic_compiler_real_M_AXIS_DATA_TVALID),
+        .s_axis_data_tdata(usp_rf_data_converter_0_m20_axis_TDATA),
+        .s_axis_data_tready(usp_rf_data_converter_0_m20_axis_TREADY),
+        .s_axis_data_tvalid(usp_rf_data_converter_0_m20_axis_TVALID));
   design_1_clk_wiz_0_0 clk_wiz_0
        (.clk_in1(usp_rf_data_converter_0_clk_adc2),
         .clk_out1(clk_wiz_0_clk_out1));
-  design_1_iq_framer_0_1 iq_framer_0
-       (.control(sw),
-        .m00_axis_aclk(clk_wiz_0_clk_out1),
+  assign Net = sw[0:0];
+  design_1_iq_trigger_framer_0_0 iq_trigger_framer_0
+       (.m00_axis_aclk(clk_wiz_0_clk_out1),
         .m00_axis_aresetn(proc_sys_reset_0_150_mb_reset),
-        .m00_axis_tdata(iq_framer_0_M00_AXIS_TDATA),
-        .m00_axis_tlast(iq_framer_0_M00_AXIS_TLAST),
-        .m00_axis_tready(iq_framer_0_M00_AXIS_TREADY),
-        .m00_axis_tstrb(iq_framer_0_M00_AXIS_TSTRB),
-        .m00_axis_tvalid(iq_framer_0_M00_AXIS_TVALID),
+        .m00_axis_tdata(iq_trigger_framer_0_M00_AXIS_TDATA),
+        .m00_axis_tlast(iq_trigger_framer_0_M00_AXIS_TLAST),
+        .m00_axis_tready(iq_trigger_framer_0_M00_AXIS_TREADY),
+        .m00_axis_tstrb(iq_trigger_framer_0_M00_AXIS_TSTRB),
+        .m00_axis_tvalid(iq_trigger_framer_0_M00_AXIS_TVALID),
         .s00_axis_aclk(clk_wiz_0_clk_out1),
         .s00_axis_aresetn(proc_sys_reset_0_150_mb_reset),
-        .s00_axis_tdata(cic_compiler_1_M_AXIS_DATA_TDATA),
+        .s00_axis_tdata(cic_compiler_imag_M_AXIS_DATA_TDATA),
         .s00_axis_tlast(1'b0),
         .s00_axis_tstrb({1'b1,1'b1}),
-        .s00_axis_tvalid(cic_compiler_1_M_AXIS_DATA_TVALID),
+        .s00_axis_tvalid(cic_compiler_imag_M_AXIS_DATA_TVALID),
         .s01_axis_aclk(clk_wiz_0_clk_out1),
         .s01_axis_aresetn(proc_sys_reset_0_150_mb_reset),
-        .s01_axis_tdata(cic_compiler_2_M_AXIS_DATA_TDATA),
+        .s01_axis_tdata(cic_compiler_real_M_AXIS_DATA_TDATA),
         .s01_axis_tlast(1'b0),
         .s01_axis_tstrb({1'b1,1'b1}),
-        .s01_axis_tvalid(cic_compiler_2_M_AXIS_DATA_TVALID));
+        .s01_axis_tvalid(cic_compiler_real_M_AXIS_DATA_TVALID),
+        .trigger(Net));
   design_1_proc_sys_reset_0_0 proc_sys_reset_0_150
        (.aux_reset_in(1'b1),
         .dcm_locked(1'b1),
