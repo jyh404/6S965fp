@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:axi_rom:1.0
-// IP Revision: 12
+// IP Revision: 13
 
 (* X_CORE_INFO = "axi_rom,Vivado 2025.1" *)
 (* CHECK_LICENSE_TYPE = "design_1_axi_rom_0_0,axi_rom,{}" *)
