@@ -1946,6 +1946,9 @@
           },
           "SIM_ASSERT_CHK": {
             "value": "false"
+          },
+          "SRC_INPUT_REG": {
+            "value": "false"
           }
         }
       }

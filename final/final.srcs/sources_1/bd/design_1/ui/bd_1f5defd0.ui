@@ -35,9 +35,9 @@ preplace netloc mmio_interface_0_trigger 1 4 3 1630 440 1910 500 2630
 preplace netloc proc_sys_reset_0_150_mb_reset 1 1 5 420 860 N 860 1000 910 1620 930 1960
 preplace netloc proc_sys_reset_0_150_peripheral_aresetn 1 1 8 410J 840 710 680 1000 630 N 630 1930 520 2600 600 2970J 860 3420
 preplace netloc usp_rf_data_converter_0_clk_adc2 1 2 1 730 750n
+preplace netloc xpm_cdc_gen_0_dest_out 1 4 2 1630 920 1910
 preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 9 30 1190 390J 660 N 660 980 610 1600 610 1940 700 2620 610 3000 870 3410
 preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 0 7 20 1390 NJ 1390 N 1390 N 1390 N 1390 N 1390 2570
-preplace netloc xpm_cdc_gen_0_dest_out 1 4 2 1630 920 1910
 preplace netloc adc2_clk_1 1 0 2 0J 950 430
 preplace netloc axi_dma_0_M_AXI_S2MM 1 8 1 3400 450n
 preplace netloc axi_ifft_config_M_AXIS_MM2S 1 6 2 NJ 400 2970

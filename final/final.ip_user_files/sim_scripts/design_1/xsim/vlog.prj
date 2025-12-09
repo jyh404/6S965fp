@@ -178,8 +178,8 @@ verilog xil_defaultlib -i "../../../../../../../../../../tools/Xilinx/2025.1/dat
 "../../../bd/design_1/ipshared/1249/hdl/mmio_interface_slave_lite_v1_0_S00_AXI.v" \
 "../../../bd/design_1/ipshared/1249/hdl/mmio_interface.v" \
 "../../../bd/design_1/ip/design_1_mmio_interface_0_0/sim/design_1_mmio_interface_0_0.v" \
-"../../../bd/design_1/sim/design_1.v" \
 "../../../bd/design_1/ip/design_1_xpm_cdc_gen_0_0/sim/design_1_xpm_cdc_gen_0_0.v" \
+"../../../bd/design_1/sim/design_1.v" \
 
 verilog xil_defaultlib "glbl.v"
 

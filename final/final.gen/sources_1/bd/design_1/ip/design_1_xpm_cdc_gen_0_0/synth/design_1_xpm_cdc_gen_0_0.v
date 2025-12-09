@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "xpm_cdc_gen_v1_0_5,Vivado 2025.1" *)
 (* CHECK_LICENSE_TYPE = "design_1_xpm_cdc_gen_0_0,xpm_cdc_gen_v1_0_5,{}" *)
-(* CORE_GENERATION_INFO = "design_1_xpm_cdc_gen_0_0,xpm_cdc_gen_v1_0_5,{x_ipProduct=Vivado 2025.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=xpm_cdc_gen,x_ipVersion=1.0,x_ipCoreRevision=5,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_CDC_TYPE=6,SRC_CLK_PERIOD=5000,DEST_CLK_PERIOD=2500,SIM_ASSERT_CHK=0,DEST_SYNC_FF=4,INIT_SYNC_FF=0,SRC_INPUT_REG=1,WIDTH=1,REG_OUTPUT=0,SIM_LOSSLESS_GRAY_CHK=0,SRC_SYNC_FF=4,DEST_EXT_HSK=1,RST_USED=1,INIT=1,RST_ACTIVE_HIGH=0}" *)
+(* CORE_GENERATION_INFO = "design_1_xpm_cdc_gen_0_0,xpm_cdc_gen_v1_0_5,{x_ipProduct=Vivado 2025.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=xpm_cdc_gen,x_ipVersion=1.0,x_ipCoreRevision=5,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_CDC_TYPE=6,SRC_CLK_PERIOD=5000,DEST_CLK_PERIOD=2500,SIM_ASSERT_CHK=0,DEST_SYNC_FF=4,INIT_SYNC_FF=0,SRC_INPUT_REG=0,WIDTH=1,REG_OUTPUT=0,SIM_LOSSLESS_GRAY_CHK=0,SRC_SYNC_FF=4,DEST_EXT_HSK=1,RST_USED=1,INIT=1,RST_ACTIVE_HIGH=0}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_xpm_cdc_gen_0_0 (
   src_clk,
@@ -79,7 +79,7 @@ output wire [0 : 0] dest_out;
     .SIM_ASSERT_CHK(0),
     .DEST_SYNC_FF(4),
     .INIT_SYNC_FF(0),
-    .SRC_INPUT_REG(1),
+    .SRC_INPUT_REG(0),
     .WIDTH(1),
     .REG_OUTPUT(0),
     .SIM_LOSSLESS_GRAY_CHK(0),

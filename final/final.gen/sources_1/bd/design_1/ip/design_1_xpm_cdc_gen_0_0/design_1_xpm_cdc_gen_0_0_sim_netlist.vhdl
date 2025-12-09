@@ -2,8 +2,8 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
--- Date        : Tue Dec  9 14:37:40 2025
--- Host        : eecs-digital-35 running 64-bit Ubuntu 24.04.3 LTS
+-- Date        : Tue Dec  9 14:49:30 2025
+-- Host        : eecs-digital-44 running 64-bit Ubuntu 24.04.3 LTS
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/jhuang25/Documents/6.S965/6S965fp/final/final.gen/sources_1/bd/design_1/ip/design_1_xpm_cdc_gen_0_0/design_1_xpm_cdc_gen_0_0_sim_netlist.vhdl
 -- Design      : design_1_xpm_cdc_gen_0_0
@@ -31,7 +31,7 @@ entity design_1_xpm_cdc_gen_0_0_xpm_cdc_single is
   attribute SIM_ASSERT_CHK : integer;
   attribute SIM_ASSERT_CHK of design_1_xpm_cdc_gen_0_0_xpm_cdc_single : entity is 0;
   attribute SRC_INPUT_REG : integer;
-  attribute SRC_INPUT_REG of design_1_xpm_cdc_gen_0_0_xpm_cdc_single : entity is 1;
+  attribute SRC_INPUT_REG of design_1_xpm_cdc_gen_0_0_xpm_cdc_single : entity is 0;
   attribute VERSION : integer;
   attribute VERSION of design_1_xpm_cdc_gen_0_0_xpm_cdc_single : entity is 0;
   attribute XPM_MODULE : string;
@@ -43,7 +43,6 @@ entity design_1_xpm_cdc_gen_0_0_xpm_cdc_single is
 end design_1_xpm_cdc_gen_0_0_xpm_cdc_single;
 
 architecture STRUCTURE of design_1_xpm_cdc_gen_0_0_xpm_cdc_single is
-  signal p_0_in : STD_LOGIC_VECTOR ( 0 to 0 );
   signal syncstages_ff : STD_LOGIC_VECTOR ( 3 downto 0 );
   attribute RTL_KEEP : string;
   attribute RTL_KEEP of syncstages_ff : signal is "true";
@@ -66,19 +65,11 @@ architecture STRUCTURE of design_1_xpm_cdc_gen_0_0_xpm_cdc_single is
   attribute XPM_CDC of \syncstages_ff_reg[3]\ : label is "SINGLE";
 begin
   dest_out <= syncstages_ff(3);
-src_ff_reg: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => '1',
-      D => src_in,
-      Q => p_0_in(0),
-      R => '0'
-    );
 \syncstages_ff_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => dest_clk,
       CE => '1',
-      D => p_0_in(0),
+      D => src_in,
       Q => syncstages_ff(0),
       R => '0'
     );
@@ -158,7 +149,7 @@ entity design_1_xpm_cdc_gen_0_0_xpm_cdc_gen_v1_0_5 is
   attribute SRC_CLK_PERIOD : integer;
   attribute SRC_CLK_PERIOD of design_1_xpm_cdc_gen_0_0_xpm_cdc_gen_v1_0_5 : entity is 5000;
   attribute SRC_INPUT_REG : integer;
-  attribute SRC_INPUT_REG of design_1_xpm_cdc_gen_0_0_xpm_cdc_gen_v1_0_5 : entity is 1;
+  attribute SRC_INPUT_REG of design_1_xpm_cdc_gen_0_0_xpm_cdc_gen_v1_0_5 : entity is 0;
   attribute SRC_SYNC_FF : integer;
   attribute SRC_SYNC_FF of design_1_xpm_cdc_gen_0_0_xpm_cdc_gen_v1_0_5 : entity is 4;
   attribute VERSION : integer;
@@ -172,7 +163,7 @@ architecture STRUCTURE of design_1_xpm_cdc_gen_0_0_xpm_cdc_gen_v1_0_5 is
   attribute DEST_SYNC_FF of xsingle : label is 4;
   attribute INIT_SYNC_FF of xsingle : label is 0;
   attribute SIM_ASSERT_CHK of xsingle : label is 0;
-  attribute SRC_INPUT_REG of xsingle : label is 1;
+  attribute SRC_INPUT_REG of xsingle : label is 0;
   attribute VERSION of xsingle : label is 0;
   attribute XPM_CDC : string;
   attribute XPM_CDC of xsingle : label is "SINGLE";
@@ -193,7 +184,7 @@ xsingle: entity work.design_1_xpm_cdc_gen_0_0_xpm_cdc_single
      port map (
       dest_clk => dest_clk,
       dest_out => dest_out(0),
-      src_clk => src_clk,
+      src_clk => '0',
       src_in => src_in(0)
     );
 end STRUCTURE;
@@ -250,7 +241,7 @@ architecture STRUCTURE of design_1_xpm_cdc_gen_0_0 is
   attribute SRC_CLK_PERIOD : integer;
   attribute SRC_CLK_PERIOD of inst : label is 5000;
   attribute SRC_INPUT_REG : integer;
-  attribute SRC_INPUT_REG of inst : label is 1;
+  attribute SRC_INPUT_REG of inst : label is 0;
   attribute SRC_SYNC_FF : integer;
   attribute SRC_SYNC_FF of inst : label is 4;
   attribute VERSION : integer;
@@ -279,7 +270,7 @@ inst: entity work.design_1_xpm_cdc_gen_0_0_xpm_cdc_gen_v1_0_5
       dest_rst_in => '1',
       dest_rst_out => NLW_inst_dest_rst_out_UNCONNECTED,
       src_arst => '1',
-      src_clk => src_clk,
+      src_clk => '0',
       src_in(0) => src_in(0),
       src_in_bin(0) => '1',
       src_pulse => '1',

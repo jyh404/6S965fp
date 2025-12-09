@@ -2,8 +2,8 @@
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-// Date        : Tue Dec  9 14:37:40 2025
-// Host        : eecs-digital-35 running 64-bit Ubuntu 24.04.3 LTS
+// Date        : Tue Dec  9 14:49:30 2025
+// Host        : eecs-digital-44 running 64-bit Ubuntu 24.04.3 LTS
 // Command     : write_verilog -force -mode funcsim
 //               /home/jhuang25/Documents/6.S965/6S965fp/final/final.gen/sources_1/bd/design_1/ip/design_1_xpm_cdc_gen_0_0/design_1_xpm_cdc_gen_0_0_sim_netlist.v
 // Design      : design_1_xpm_cdc_gen_0_0
@@ -27,7 +27,6 @@ module design_1_xpm_cdc_gen_0_0
 
   wire dest_clk;
   wire [0:0]dest_out;
-  wire src_clk;
   wire [0:0]src_in;
   wire NLW_inst_dest_arst_UNCONNECTED;
   wire NLW_inst_dest_pulse_UNCONNECTED;
@@ -48,7 +47,7 @@ module design_1_xpm_cdc_gen_0_0
   (* SIM_ASSERT_CHK = "0" *) 
   (* SIM_LOSSLESS_GRAY_CHK = "0" *) 
   (* SRC_CLK_PERIOD = "5000" *) 
-  (* SRC_INPUT_REG = "1" *) 
+  (* SRC_INPUT_REG = "0" *) 
   (* SRC_SYNC_FF = "4" *) 
   (* VERSION = "0" *) 
   (* WIDTH = "1" *) 
@@ -63,7 +62,7 @@ module design_1_xpm_cdc_gen_0_0
         .dest_rst_in(1'b1),
         .dest_rst_out(NLW_inst_dest_rst_out_UNCONNECTED),
         .src_arst(1'b1),
-        .src_clk(src_clk),
+        .src_clk(1'b0),
         .src_in(src_in),
         .src_in_bin(1'b1),
         .src_pulse(1'b1),
@@ -76,7 +75,7 @@ endmodule
 (* DEST_SYNC_FF = "4" *) (* INIT = "1" *) (* INIT_SYNC_FF = "0" *) 
 (* ORIG_REF_NAME = "xpm_cdc_gen_v1_0_5" *) (* REG_OUTPUT = "0" *) (* RST_ACTIVE_HIGH = "0" *) 
 (* RST_USED = "1" *) (* SIM_ASSERT_CHK = "0" *) (* SIM_LOSSLESS_GRAY_CHK = "0" *) 
-(* SRC_CLK_PERIOD = "5000" *) (* SRC_INPUT_REG = "1" *) (* SRC_SYNC_FF = "4" *) 
+(* SRC_CLK_PERIOD = "5000" *) (* SRC_INPUT_REG = "0" *) (* SRC_SYNC_FF = "4" *) 
 (* VERSION = "0" *) (* WIDTH = "1" *) 
 module design_1_xpm_cdc_gen_0_0_xpm_cdc_gen_v1_0_5
    (src_clk,
@@ -117,7 +116,6 @@ module design_1_xpm_cdc_gen_0_0_xpm_cdc_gen_v1_0_5
   wire \<const0> ;
   wire dest_clk;
   wire [0:0]dest_out;
-  wire src_clk;
   wire [0:0]src_in;
 
   assign dest_arst = \<const0> ;
@@ -131,19 +129,19 @@ module design_1_xpm_cdc_gen_0_0_xpm_cdc_gen_v1_0_5
   (* DEST_SYNC_FF = "4" *) 
   (* INIT_SYNC_FF = "0" *) 
   (* SIM_ASSERT_CHK = "0" *) 
-  (* SRC_INPUT_REG = "1" *) 
+  (* SRC_INPUT_REG = "0" *) 
   (* VERSION = "0" *) 
   (* XPM_CDC = "SINGLE" *) 
   (* XPM_MODULE = "TRUE" *) 
   design_1_xpm_cdc_gen_0_0_xpm_cdc_single xsingle
        (.dest_clk(dest_clk),
         .dest_out(dest_out),
-        .src_clk(src_clk),
+        .src_clk(1'b0),
         .src_in(src_in));
 endmodule
 
 (* DEST_SYNC_FF = "4" *) (* INIT_SYNC_FF = "0" *) (* ORIG_REF_NAME = "xpm_cdc_single" *) 
-(* SIM_ASSERT_CHK = "0" *) (* SRC_INPUT_REG = "1" *) (* VERSION = "0" *) 
+(* SIM_ASSERT_CHK = "0" *) (* SRC_INPUT_REG = "0" *) (* VERSION = "0" *) 
 (* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "true" *) (* xpm_cdc = "SINGLE" *) 
 module design_1_xpm_cdc_gen_0_0_xpm_cdc_single
    (src_clk,
@@ -156,25 +154,17 @@ module design_1_xpm_cdc_gen_0_0_xpm_cdc_single
   output dest_out;
 
   wire dest_clk;
-  wire [0:0]p_0_in;
-  wire src_clk;
   wire src_in;
   (* RTL_KEEP = "true" *) (* async_reg = "true" *) (* xpm_cdc = "SINGLE" *) wire [3:0]syncstages_ff;
 
   assign dest_out = syncstages_ff[3];
-  FDRE src_ff_reg
-       (.C(src_clk),
-        .CE(1'b1),
-        .D(src_in),
-        .Q(p_0_in),
-        .R(1'b0));
   (* ASYNC_REG *) 
   (* KEEP = "true" *) 
   (* XPM_CDC = "SINGLE" *) 
   FDRE \syncstages_ff_reg[0] 
        (.C(dest_clk),
         .CE(1'b1),
-        .D(p_0_in),
+        .D(src_in),
         .Q(syncstages_ff[0]),
         .R(1'b0));
   (* ASYNC_REG *) 

@@ -78,7 +78,7 @@ output wire [0 : 0] dest_out;
     .SIM_ASSERT_CHK(0),
     .DEST_SYNC_FF(4),
     .INIT_SYNC_FF(0),
-    .SRC_INPUT_REG(1),
+    .SRC_INPUT_REG(0),
     .WIDTH(1),
     .REG_OUTPUT(0),
     .SIM_LOSSLESS_GRAY_CHK(0),

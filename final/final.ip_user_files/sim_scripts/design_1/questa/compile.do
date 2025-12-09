@@ -412,14 +412,12 @@ vcom -work xil_defaultlib -64 -93  \
 "../../../bd/design_1/ip/design_1_axi_prn_config_0/sim/design_1_axi_prn_config_0.vhd" \
 "../../../bd/design_1/ip/design_1_axi_prn_config_1/sim/design_1_axi_prn_config_1.vhd" \
 
-vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../final.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../final.gen/sources_1/bd/design_1/ipshared/7711/hdl" "+incdir+../../../../final.gen/sources_1/bd/design_1/ipshared/a9be" "+incdir+../../../../final.gen/sources_1/bd/design_1/ipshared/434f/hdl" "+incdir+../../../../final.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../final.gen/sources_1/bd/design_1/ipshared/a8e4/hdl/verilog" "+incdir+../../../../../../../../../../tools/Xilinx/2025.1/data/rsb/busdef" "+incdir+/tools/Xilinx/2025.1/Vivado/data/xilinx_vip/include" \
-"../../../bd/design_1/sim/design_1.v" \
-
 vlog -work xpm_cdc_gen_v1_0_5 -64 -incr -mfcu  "+incdir+../../../../final.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../final.gen/sources_1/bd/design_1/ipshared/7711/hdl" "+incdir+../../../../final.gen/sources_1/bd/design_1/ipshared/a9be" "+incdir+../../../../final.gen/sources_1/bd/design_1/ipshared/434f/hdl" "+incdir+../../../../final.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../final.gen/sources_1/bd/design_1/ipshared/a8e4/hdl/verilog" "+incdir+../../../../../../../../../../tools/Xilinx/2025.1/data/rsb/busdef" "+incdir+/tools/Xilinx/2025.1/Vivado/data/xilinx_vip/include" \
 "../../../../final.gen/sources_1/bd/design_1/ipshared/5f71/hdl/xpm_cdc_gen_v1_0_vl_rfs.v" \
 
 vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../final.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../final.gen/sources_1/bd/design_1/ipshared/7711/hdl" "+incdir+../../../../final.gen/sources_1/bd/design_1/ipshared/a9be" "+incdir+../../../../final.gen/sources_1/bd/design_1/ipshared/434f/hdl" "+incdir+../../../../final.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../final.gen/sources_1/bd/design_1/ipshared/a8e4/hdl/verilog" "+incdir+../../../../../../../../../../tools/Xilinx/2025.1/data/rsb/busdef" "+incdir+/tools/Xilinx/2025.1/Vivado/data/xilinx_vip/include" \
 "../../../bd/design_1/ip/design_1_xpm_cdc_gen_0_0/sim/design_1_xpm_cdc_gen_0_0.v" \
+"../../../bd/design_1/sim/design_1.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"
