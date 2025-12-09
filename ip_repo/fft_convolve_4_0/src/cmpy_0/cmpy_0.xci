@@ -5,7 +5,7 @@
     "cell_name": "multiplier",
     "component_reference": "xilinx.com:ip:cmpy:6.0",
     "ip_revision": "26",
-    "gen_directory": "../../../../fft_convolve/fft_convolve.tmp/fft_convolve_v4_0_project/fft_convolve_v4_0_project.gen/sources_1/ip/cmpy_0",
+    "gen_directory": "../../../../final/final.tmp/fft_convolve_v4_0_project/fft_convolve_v4_0_project.gen/sources_1/ip/cmpy_0",
     "parameters": {
       "component_parameters": {
         "Component_Name": [ { "value": "cmpy_0", "resolve_type": "user", "usage": "all" } ],
@@ -85,7 +85,7 @@
         "IPCONTEXT": [ { "value": "IP_Flow" } ],
         "IPREVISION": [ { "value": "26" } ],
         "MANAGED": [ { "value": "TRUE" } ],
-        "OUTPUTDIR": [ { "value": "../../../../fft_convolve/fft_convolve.tmp/fft_convolve_v4_0_project/fft_convolve_v4_0_project.gen/sources_1/ip/cmpy_0" } ],
+        "OUTPUTDIR": [ { "value": "../../../../final/final.tmp/fft_convolve_v4_0_project/fft_convolve_v4_0_project.gen/sources_1/ip/cmpy_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "." } ],
         "SWVERSION": [ { "value": "2025.1" } ],

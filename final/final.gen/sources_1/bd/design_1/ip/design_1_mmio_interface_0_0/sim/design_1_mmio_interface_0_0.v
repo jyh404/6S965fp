@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:mmio_interface:1.0
-// IP Revision: 4
+// IP Revision: 7
 
 `timescale 1ns/1ps
 
@@ -57,6 +57,7 @@ module design_1_mmio_interface_0_0 (
   scaling,
   prn_id,
   trigger,
+  probe,
   s00_axi_aclk,
   s00_axi_aresetn,
   s00_axi_awaddr,
@@ -83,6 +84,7 @@ module design_1_mmio_interface_0_0 (
 output wire [3 : 0] scaling;
 output wire [5 : 0] prn_id;
 output wire trigger;
+output wire probe;
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 S00_AXI_CLK CLK" *)
 (* X_INTERFACE_MODE = "slave" *)
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXI_CLK, ASSOCIATED_BUSIF S00_AXI, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 149999985, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_zynq_ultra_ps_e_0_0_pl_clk0, INSERT_VIP 0" *)
@@ -140,6 +142,7 @@ input wire s00_axi_rready;
     .scaling(scaling),
     .prn_id(prn_id),
     .trigger(trigger),
+    .probe(probe),
     .s00_axi_aclk(s00_axi_aclk),
     .s00_axi_aresetn(s00_axi_aresetn),
     .s00_axi_awaddr(s00_axi_awaddr),

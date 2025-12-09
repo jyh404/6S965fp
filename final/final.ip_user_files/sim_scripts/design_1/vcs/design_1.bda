@@ -365,7 +365,7 @@
                 "MI": "M_AXI_HPM0_FPD",
                 "MS": "SEG_mmio_interface_0_S00_AXI_reg",
                 "MV": "xilinx.com:ip:zynq_ultra_ps_e:3.5",
-                "SX": "/bram_interface",
+                "SX": "/mmio_interface",
                 "SI": "S00_AXI",
                 "SS": "S00_AXI_reg",
                 "SV": "user.org:user:mmio_interface:1.0",

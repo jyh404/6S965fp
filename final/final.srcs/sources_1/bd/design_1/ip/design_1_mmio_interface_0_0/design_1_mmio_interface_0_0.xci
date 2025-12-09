@@ -2,9 +2,9 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "design_1_mmio_interface_0_0",
-    "cell_name": "bram_interface",
+    "cell_name": "mmio_interface",
     "component_reference": "user.org:user:mmio_interface:1.0",
-    "ip_revision": "4",
+    "ip_revision": "7",
     "gen_directory": "../../../../../../final.gen/sources_1/bd/design_1/ip/design_1_mmio_interface_0_0",
     "parameters": {
       "component_parameters": {
@@ -33,7 +33,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "4" } ],
+        "IPREVISION": [ { "value": "7" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../final.gen/sources_1/bd/design_1/ip/design_1_mmio_interface_0_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
@@ -47,6 +47,7 @@
         "scaling": [ { "direction": "out", "size_left": "3", "size_right": "0" } ],
         "prn_id": [ { "direction": "out", "size_left": "5", "size_right": "0" } ],
         "trigger": [ { "direction": "out" } ],
+        "probe": [ { "direction": "out" } ],
         "s00_axi_aclk": [ { "direction": "in" } ],
         "s00_axi_aresetn": [ { "direction": "in" } ],
         "s00_axi_awaddr": [ { "direction": "in", "size_left": "4", "size_right": "0" } ],
