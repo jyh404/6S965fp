@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 sampling_rate = 6.4e6
 
 # read in the recorded radio wave file (change dtype='byte' for data from `hackrf_transfer`)
-baseband = gpswt.SdrWave.from_raw_file('./example-data/out-1203-6.4-1.dat', sampling_rate=sampling_rate, 
+baseband = gpswt.SdrWave.from_raw_file('../recorded_data/out-1203-6.4.1.dat', sampling_rate=sampling_rate, 
                                        #, max_samples=100000000)  # limit samples for fast experiments
                                        dtype='byte') 
 
