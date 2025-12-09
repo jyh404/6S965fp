@@ -1707,7 +1707,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:176e9aa9</spirit:value>
+            <spirit:value>9:78f175a7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1721,11 +1721,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Dec 08 21:10:37 UTC 2025</spirit:value>
+            <spirit:value>Mon Dec 08 23:21:20 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:176e9aa9</spirit:value>
+            <spirit:value>9:78f175a7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1736,7 +1736,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:176e9aa9</spirit:value>
+            <spirit:value>9:78f175a7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1752,11 +1752,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Dec 08 21:08:27 UTC 2025</spirit:value>
+            <spirit:value>Mon Dec 08 23:19:11 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:5cd291b7</spirit:value>
+            <spirit:value>9:82b5f4cf</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1772,11 +1772,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Dec 08 21:08:27 UTC 2025</spirit:value>
+            <spirit:value>Mon Dec 08 23:19:11 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:5cd291b7</spirit:value>
+            <spirit:value>9:82b5f4cf</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1792,11 +1792,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Dec 08 21:08:27 UTC 2025</spirit:value>
+            <spirit:value>Mon Dec 08 23:19:11 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:176e9aa9</spirit:value>
+            <spirit:value>9:78f175a7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1812,11 +1812,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Dec 08 21:08:27 UTC 2025</spirit:value>
+            <spirit:value>Mon Dec 08 23:19:11 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:176e9aa9</spirit:value>
+            <spirit:value>9:78f175a7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2565,18 +2565,17 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/9fa5/hdl/fft_convolve.v</spirit:name>
+        <spirit:name>../../ipshared/4310/hdl/fft_convolve.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/xfft_8192/xfft_8192.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_fft_prn</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/cmpy_0/cmpy_0.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_multiplier</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/xfft_4096/xfft_4096.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -2590,18 +2589,17 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/9fa5/hdl/fft_convolve.v</spirit:name>
+        <spirit:name>../../ipshared/4310/hdl/fft_convolve.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/xfft_8192/xfft_8192.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_fft_prn</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/cmpy_0/cmpy_0.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_multiplier</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/xfft_4096/xfft_4096.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -2704,7 +2702,7 @@
       <xilinx:xpmLibraries>
         <xilinx:xpmLibrary>XPM_MEMORY</xilinx:xpmLibrary>
       </xilinx:xpmLibraries>
-      <xilinx:coreRevision>9</xilinx:coreRevision>
+      <xilinx:coreRevision>11</xilinx:coreRevision>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_OUTPUT_DATA.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_OUTPUT_DATA.FREQ_HZ" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
@@ -2837,7 +2835,7 @@
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2025.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="a23b7782"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="60494508"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="bb293f05"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="da39d3e2"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="57f82374"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="bc58f9e7"/>

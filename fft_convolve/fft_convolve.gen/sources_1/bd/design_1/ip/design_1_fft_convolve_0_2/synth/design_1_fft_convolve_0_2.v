@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:fft_convolve:4.0
-// IP Revision: 9
+// IP Revision: 11
 
 (* X_CORE_INFO = "fft_convolve,Vivado 2025.1" *)
 (* CHECK_LICENSE_TYPE = "design_1_fft_convolve_0_2,fft_convolve,{}" *)

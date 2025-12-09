@@ -9,14 +9,14 @@ vlib modelsim_lib/msim/zynq_ultra_ps_e_vip_v1_0_21
 vlib modelsim_lib/msim/xil_defaultlib
 vlib modelsim_lib/msim/xbip_utils_v3_0_14
 vlib modelsim_lib/msim/axi_utils_v2_0_10
-vlib modelsim_lib/msim/c_reg_fd_v12_0_10
-vlib modelsim_lib/msim/xbip_dsp48_wrapper_v3_0_7
-vlib modelsim_lib/msim/xbip_pipe_v3_0_10
-vlib modelsim_lib/msim/c_addsub_v12_0_20
-vlib modelsim_lib/msim/c_shift_ram_v12_0_19
 vlib modelsim_lib/msim/mult_gen_v12_0_23
+vlib modelsim_lib/msim/xbip_pipe_v3_0_10
+vlib modelsim_lib/msim/xbip_dsp48_wrapper_v3_0_7
 vlib modelsim_lib/msim/floating_point_v7_1_20
 vlib modelsim_lib/msim/cmpy_v6_0_26
+vlib modelsim_lib/msim/c_reg_fd_v12_0_10
+vlib modelsim_lib/msim/c_addsub_v12_0_20
+vlib modelsim_lib/msim/c_shift_ram_v12_0_19
 vlib modelsim_lib/msim/xfft_v9_1_14
 vlib modelsim_lib/msim/axi_datamover_v5_1_37
 vlib modelsim_lib/msim/axi_sg_v4_1_21
@@ -34,14 +34,14 @@ vmap zynq_ultra_ps_e_vip_v1_0_21 modelsim_lib/msim/zynq_ultra_ps_e_vip_v1_0_21
 vmap xil_defaultlib modelsim_lib/msim/xil_defaultlib
 vmap xbip_utils_v3_0_14 modelsim_lib/msim/xbip_utils_v3_0_14
 vmap axi_utils_v2_0_10 modelsim_lib/msim/axi_utils_v2_0_10
-vmap c_reg_fd_v12_0_10 modelsim_lib/msim/c_reg_fd_v12_0_10
-vmap xbip_dsp48_wrapper_v3_0_7 modelsim_lib/msim/xbip_dsp48_wrapper_v3_0_7
-vmap xbip_pipe_v3_0_10 modelsim_lib/msim/xbip_pipe_v3_0_10
-vmap c_addsub_v12_0_20 modelsim_lib/msim/c_addsub_v12_0_20
-vmap c_shift_ram_v12_0_19 modelsim_lib/msim/c_shift_ram_v12_0_19
 vmap mult_gen_v12_0_23 modelsim_lib/msim/mult_gen_v12_0_23
+vmap xbip_pipe_v3_0_10 modelsim_lib/msim/xbip_pipe_v3_0_10
+vmap xbip_dsp48_wrapper_v3_0_7 modelsim_lib/msim/xbip_dsp48_wrapper_v3_0_7
 vmap floating_point_v7_1_20 modelsim_lib/msim/floating_point_v7_1_20
 vmap cmpy_v6_0_26 modelsim_lib/msim/cmpy_v6_0_26
+vmap c_reg_fd_v12_0_10 modelsim_lib/msim/c_reg_fd_v12_0_10
+vmap c_addsub_v12_0_20 modelsim_lib/msim/c_addsub_v12_0_20
+vmap c_shift_ram_v12_0_19 modelsim_lib/msim/c_shift_ram_v12_0_19
 vmap xfft_v9_1_14 modelsim_lib/msim/xfft_v9_1_14
 vmap axi_datamover_v5_1_37 modelsim_lib/msim/axi_datamover_v5_1_37
 vmap axi_sg_v4_1_21 modelsim_lib/msim/axi_sg_v4_1_21
@@ -83,47 +83,49 @@ vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../fft_convolve.gen
 "../../../bd/design_1/ip/design_1_zynq_ultra_ps_e_0_2/sim/design_1_zynq_ultra_ps_e_0_2_vip_wrapper.v" \
 
 vcom -work xbip_utils_v3_0_14 -64 -93  \
-"../../../../fft_convolve.gen/sources_1/bd/design_1/ip/design_1_fft_convolve_0_2/src/xfft_8192/hdl/xbip_utils_v3_0_vh_rfs.vhd" \
+"../../../../fft_convolve.gen/sources_1/bd/design_1/ip/design_1_fft_convolve_0_2/src/cmpy_0/hdl/xbip_utils_v3_0_vh_rfs.vhd" \
 
 vcom -work axi_utils_v2_0_10 -64 -93  \
-"../../../../fft_convolve.gen/sources_1/bd/design_1/ip/design_1_fft_convolve_0_2/src/xfft_8192/hdl/axi_utils_v2_0_vh_rfs.vhd" \
-
-vcom -work c_reg_fd_v12_0_10 -64 -93  \
-"../../../../fft_convolve.gen/sources_1/bd/design_1/ip/design_1_fft_convolve_0_2/src/xfft_8192/hdl/c_reg_fd_v12_0_vh_rfs.vhd" \
-
-vcom -work xbip_dsp48_wrapper_v3_0_7 -64 -93  \
-"../../../../fft_convolve.gen/sources_1/bd/design_1/ip/design_1_fft_convolve_0_2/src/xfft_8192/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd" \
-
-vcom -work xbip_pipe_v3_0_10 -64 -93  \
-"../../../../fft_convolve.gen/sources_1/bd/design_1/ip/design_1_fft_convolve_0_2/src/xfft_8192/hdl/xbip_pipe_v3_0_vh_rfs.vhd" \
-
-vcom -work c_addsub_v12_0_20 -64 -93  \
-"../../../../fft_convolve.gen/sources_1/bd/design_1/ip/design_1_fft_convolve_0_2/src/xfft_8192/hdl/c_addsub_v12_0_vh_rfs.vhd" \
-
-vcom -work c_shift_ram_v12_0_19 -64 -93  \
-"../../../../fft_convolve.gen/sources_1/bd/design_1/ip/design_1_fft_convolve_0_2/src/xfft_8192/hdl/c_shift_ram_v12_0_vh_rfs.vhd" \
+"../../../../fft_convolve.gen/sources_1/bd/design_1/ip/design_1_fft_convolve_0_2/src/cmpy_0/hdl/axi_utils_v2_0_vh_rfs.vhd" \
 
 vcom -work mult_gen_v12_0_23 -64 -93  \
-"../../../../fft_convolve.gen/sources_1/bd/design_1/ip/design_1_fft_convolve_0_2/src/xfft_8192/hdl/mult_gen_v12_0_vh_rfs.vhd" \
+"../../../../fft_convolve.gen/sources_1/bd/design_1/ip/design_1_fft_convolve_0_2/src/cmpy_0/hdl/mult_gen_v12_0_vh_rfs.vhd" \
+
+vcom -work xbip_pipe_v3_0_10 -64 -93  \
+"../../../../fft_convolve.gen/sources_1/bd/design_1/ip/design_1_fft_convolve_0_2/src/cmpy_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd" \
+
+vcom -work xbip_dsp48_wrapper_v3_0_7 -64 -93  \
+"../../../../fft_convolve.gen/sources_1/bd/design_1/ip/design_1_fft_convolve_0_2/src/cmpy_0/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd" \
 
 vcom -work floating_point_v7_1_20 -64 -93  \
-"../../../../fft_convolve.gen/sources_1/bd/design_1/ip/design_1_fft_convolve_0_2/src/xfft_8192/hdl/floating_point_v7_1_vh_rfs.vhd" \
+"../../../../fft_convolve.gen/sources_1/bd/design_1/ip/design_1_fft_convolve_0_2/src/cmpy_0/hdl/floating_point_v7_1_vh_rfs.vhd" \
 
 vcom -work cmpy_v6_0_26 -64 -93  \
-"../../../../fft_convolve.gen/sources_1/bd/design_1/ip/design_1_fft_convolve_0_2/src/xfft_8192/hdl/cmpy_v6_0_vh_rfs.vhd" \
-
-vcom -work xfft_v9_1_14 -64 -2008  \
-"../../../../fft_convolve.gen/sources_1/bd/design_1/ip/design_1_fft_convolve_0_2/src/xfft_8192/hdl/xfft_v9_1_vh08_rfs.vhd" \
-
-vcom -work xfft_v9_1_14 -64 -93  \
-"../../../../fft_convolve.gen/sources_1/bd/design_1/ip/design_1_fft_convolve_0_2/src/xfft_8192/hdl/xfft_v9_1_vh_rfs.vhd" \
+"../../../../fft_convolve.gen/sources_1/bd/design_1/ip/design_1_fft_convolve_0_2/src/cmpy_0/hdl/cmpy_v6_0_vh_rfs.vhd" \
 
 vcom -work xil_defaultlib -64 -93  \
-"../../../bd/design_1/ip/design_1_fft_convolve_0_2/src/xfft_8192/sim/xfft_8192.vhd" \
 "../../../bd/design_1/ip/design_1_fft_convolve_0_2/src/cmpy_0/sim/cmpy_0.vhd" \
 
+vcom -work c_reg_fd_v12_0_10 -64 -93  \
+"../../../../fft_convolve.gen/sources_1/bd/design_1/ip/design_1_fft_convolve_0_2/src/xfft_4096/hdl/c_reg_fd_v12_0_vh_rfs.vhd" \
+
+vcom -work c_addsub_v12_0_20 -64 -93  \
+"../../../../fft_convolve.gen/sources_1/bd/design_1/ip/design_1_fft_convolve_0_2/src/xfft_4096/hdl/c_addsub_v12_0_vh_rfs.vhd" \
+
+vcom -work c_shift_ram_v12_0_19 -64 -93  \
+"../../../../fft_convolve.gen/sources_1/bd/design_1/ip/design_1_fft_convolve_0_2/src/xfft_4096/hdl/c_shift_ram_v12_0_vh_rfs.vhd" \
+
+vcom -work xfft_v9_1_14 -64 -2008  \
+"../../../../fft_convolve.gen/sources_1/bd/design_1/ip/design_1_fft_convolve_0_2/src/xfft_4096/hdl/xfft_v9_1_vh08_rfs.vhd" \
+
+vcom -work xfft_v9_1_14 -64 -93  \
+"../../../../fft_convolve.gen/sources_1/bd/design_1/ip/design_1_fft_convolve_0_2/src/xfft_4096/hdl/xfft_v9_1_vh_rfs.vhd" \
+
+vcom -work xil_defaultlib -64 -93  \
+"../../../bd/design_1/ip/design_1_fft_convolve_0_2/src/xfft_4096/sim/xfft_4096.vhd" \
+
 vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/7711/hdl" "+incdir+../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/a8e4/hdl/verilog" "+incdir+../../../../../../../../../../tools/Xilinx/2025.1/data/rsb/busdef" "+incdir+/tools/Xilinx/2025.1/Vivado/data/xilinx_vip/include" \
-"../../../bd/design_1/ipshared/9fa5/hdl/fft_convolve.v" \
+"../../../bd/design_1/ipshared/4310/hdl/fft_convolve.v" \
 "../../../bd/design_1/ip/design_1_fft_convolve_0_2/sim/design_1_fft_convolve_0_2.v" \
 
 vcom -work axi_datamover_v5_1_37 -64 -93  \
