@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Dec  8 22:32:25 2025" VIVADOVERSION="2025.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Dec  9 09:51:34 2025" VIVADOVERSION="2025.1">
 
   <SYSTEMINFO ARCH="zynquplusRFSOC" BOARD="realdigital.org:rfsoc4x2:part0:1.0" DEVICE="xczu48dr" NAME="design_1" PACKAGE="ffvg1517" SPEEDGRADE="-2"/>
 
@@ -16,7 +16,7 @@
     </PORT>
     <PORT DIR="I" LEFT="3" NAME="sw" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_sw">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="ilslice_0" PORT="Din"/>
+        <CONNECTION INSTANCE="iq_framer_0" PORT="control"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="sysref_in_diff_n" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_sysref_in_n">
@@ -1279,111 +1279,15 @@
         <PERIPHERAL INSTANCE="zynq_ultra_ps_e_0"/>
       </PERIPHERALS>
     </MODULE>
-    <MODULE COREREVISION="4" FULLNAME="/axi_ram_0" HWVERSION="1.0" INSTANCE="axi_ram_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axi_ram" VLNV="user.org:user:axi_ram:1.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="C_M00_AXIS_START_COUNT" VALUE="32"/>
-        <PARAMETER NAME="C_M00_AXIS_TDATA_WIDTH" VALUE="32"/>
-        <PARAMETER NAME="C_S00_AXIS_TDATA_WIDTH" VALUE="32"/>
-        <PARAMETER NAME="N" VALUE="4096"/>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_axi_ram_0_0"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT CLKFREQUENCY="149999985" DIR="I" NAME="m00_axis_aclk" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_clk0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="m00_axis_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="proc_sys_reset_0_150_peripheral_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="proc_sys_reset_0_150" PORT="peripheral_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="m00_axis_tdata" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" NAME="m00_axis_tlast" SIGIS="undef"/>
-        <PORT DIR="I" NAME="m00_axis_tready" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="3" NAME="m00_axis_tstrb" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" NAME="m00_axis_tvalid" SIGIS="undef"/>
-        <PORT CLKFREQUENCY="149999985" DIR="I" NAME="s00_axis_aclk" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_clk0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="s00_axis_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="proc_sys_reset_0_150_peripheral_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="proc_sys_reset_0_150" PORT="peripheral_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="31" NAME="s00_axis_tdata" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" NAME="s00_axis_tlast" SIGIS="undef"/>
-        <PORT DIR="O" NAME="s00_axis_tready" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="3" NAME="s00_axis_tstrb" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" NAME="s00_axis_tvalid" SIGIS="undef"/>
-        <PORT DIR="I" NAME="trigger" SIGIS="undef" SIGNAME="ilslice_0_Dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ilslice_0" PORT="Dout"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES>
-        <BUSINTERFACE BUSNAME="__NOC__" NAME="S00_AXIS" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
-          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_zynq_ultra_ps_e_0_0_pl_clk0"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="149999985"/>
-          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
-          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
-          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
-          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
-          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
-          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
-          <PARAMETER NAME="PHASE" VALUE="0.0"/>
-          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
-          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="WIZ_DATA_WIDTH" VALUE="32"/>
-          <PORTMAPS>
-            <PORTMAP LOGICAL="TDATA" PHYSICAL="s00_axis_tdata"/>
-            <PORTMAP LOGICAL="TLAST" PHYSICAL="s00_axis_tlast"/>
-            <PORTMAP LOGICAL="TREADY" PHYSICAL="s00_axis_tready"/>
-            <PORTMAP LOGICAL="TSTRB" PHYSICAL="s00_axis_tstrb"/>
-            <PORTMAP LOGICAL="TVALID" PHYSICAL="s00_axis_tvalid"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="__NOC__" NAME="M00_AXIS" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
-          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_zynq_ultra_ps_e_0_0_pl_clk0"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="149999985"/>
-          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
-          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
-          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
-          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
-          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
-          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
-          <PARAMETER NAME="PHASE" VALUE="0.0"/>
-          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
-          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="WIZ_DATA_WIDTH" VALUE="32"/>
-          <PORTMAPS>
-            <PORTMAP LOGICAL="TDATA" PHYSICAL="m00_axis_tdata"/>
-            <PORTMAP LOGICAL="TLAST" PHYSICAL="m00_axis_tlast"/>
-            <PORTMAP LOGICAL="TREADY" PHYSICAL="m00_axis_tready"/>
-            <PORTMAP LOGICAL="TSTRB" PHYSICAL="m00_axis_tstrb"/>
-            <PORTMAP LOGICAL="TVALID" PHYSICAL="m00_axis_tvalid"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
-      </BUSINTERFACES>
-    </MODULE>
-    <MODULE BD="design_1_axi_smc_0" BDTYPE="SBD" COREREVISION="27" DRIVERMODE="CORE" FULLNAME="/axi_smc" HWVERSION="1.0" INSTANCE="axi_smc" IPTYPE="BUS" IS_ENABLE="1" MODCLASS="BUS" MODTYPE="smartconnect" SIM_BD="design_1_axi_smc_0" VLNV="xilinx.com:ip:smartconnect:1.0">
+    <MODULE BD="design_1_axi_smc_2" BDTYPE="SBD" COREREVISION="27" DRIVERMODE="CORE" FULLNAME="/axi_smc" HWVERSION="1.0" INSTANCE="axi_smc" IPTYPE="BUS" IS_ENABLE="1" MODCLASS="BUS" MODTYPE="smartconnect" SIM_BD="design_1_axi_smc_2" VLNV="xilinx.com:ip:smartconnect:1.0">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=smartconnect;v=v1_0;d=pg247-smartconnect.pdf"/>
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="HAS_RESET" VALUE="1"/>
-        <PARAMETER NAME="TLM_COMPONENT_NAME" VALUE="design_1_axi_smc_0"/>
+        <PARAMETER NAME="TLM_COMPONENT_NAME" VALUE="design_1_axi_smc_2"/>
         <PARAMETER NAME="ADVANCED_PROPERTIES" VALUE="0"/>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_axi_smc_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_axi_smc_2"/>
         <PARAMETER NAME="HAS_ARESETN" VALUE="1"/>
         <PARAMETER NAME="NUM_CLKS" VALUE="1"/>
         <PARAMETER NAME="NUM_MI" VALUE="2"/>
@@ -2211,15 +2115,15 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE BD="design_1_axi_smc_1_0" BDTYPE="SBD" COREREVISION="27" DRIVERMODE="CORE" FULLNAME="/axi_smc_1" HWVERSION="1.0" INSTANCE="axi_smc_1" IPTYPE="BUS" IS_ENABLE="1" MODCLASS="BUS" MODTYPE="smartconnect" SIM_BD="design_1_axi_smc_1_0" VLNV="xilinx.com:ip:smartconnect:1.0">
+    <MODULE BD="design_1_axi_smc_1_1" BDTYPE="SBD" COREREVISION="27" DRIVERMODE="CORE" FULLNAME="/axi_smc_1" HWVERSION="1.0" INSTANCE="axi_smc_1" IPTYPE="BUS" IS_ENABLE="1" MODCLASS="BUS" MODTYPE="smartconnect" SIM_BD="design_1_axi_smc_1_1" VLNV="xilinx.com:ip:smartconnect:1.0">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=smartconnect;v=v1_0;d=pg247-smartconnect.pdf"/>
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="HAS_RESET" VALUE="1"/>
-        <PARAMETER NAME="TLM_COMPONENT_NAME" VALUE="design_1_axi_smc_1_0"/>
+        <PARAMETER NAME="TLM_COMPONENT_NAME" VALUE="design_1_axi_smc_1_1"/>
         <PARAMETER NAME="ADVANCED_PROPERTIES" VALUE="0"/>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_axi_smc_1_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_axi_smc_1_1"/>
         <PARAMETER NAME="HAS_ARESETN" VALUE="1"/>
         <PARAMETER NAME="NUM_CLKS" VALUE="1"/>
         <PARAMETER NAME="NUM_MI" VALUE="1"/>
@@ -2594,35 +2498,39 @@
             <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axis_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst"/>
+        <PORT DIR="I" NAME="s_axis_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="proc_sys_reset_1_147_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="proc_sys_reset_1_147" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" LEFT="31" NAME="s_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_data_fifo_0_s_axis_tdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="iq_trigger_framer_0" PORT="m00_axis_tdata"/>
+            <CONNECTION INSTANCE="iq_framer_0" PORT="m00_axis_tdata"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="s_axis_tlast" SIGIS="undef" SIGNAME="axis_data_fifo_0_s_axis_tlast">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="iq_trigger_framer_0" PORT="m00_axis_tlast"/>
+            <CONNECTION INSTANCE="iq_framer_0" PORT="m00_axis_tlast"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="s_axis_tready" SIGIS="undef" SIGNAME="axis_data_fifo_0_s_axis_tready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="iq_trigger_framer_0" PORT="m00_axis_tready"/>
+            <CONNECTION INSTANCE="iq_framer_0" PORT="m00_axis_tready"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="3" NAME="s_axis_tstrb" RIGHT="0" SIGIS="undef" SIGNAME="axis_data_fifo_0_s_axis_tstrb">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="iq_trigger_framer_0" PORT="m00_axis_tstrb"/>
+            <CONNECTION INSTANCE="iq_framer_0" PORT="m00_axis_tstrb"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="s_axis_tvalid" SIGIS="undef" SIGNAME="axis_data_fifo_0_s_axis_tvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="iq_trigger_framer_0" PORT="m00_axis_tvalid"/>
+            <CONNECTION INSTANCE="iq_framer_0" PORT="m00_axis_tvalid"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
       <BUSINTERFACES>
-        <BUSINTERFACE BUSNAME="iq_trigger_framer_0_M00_AXIS" NAME="S_AXIS" TYPE="SLAVE" VLNV="xilinx.com:interface:axis:1.0">
+        <BUSINTERFACE BUSNAME="iq_framer_0_M00_AXIS" NAME="S_AXIS" TYPE="SLAVE" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_clk_wiz_0_0_clk_out1"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="102400000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
@@ -2747,12 +2655,12 @@
         </PORT>
         <PORT DIR="O" LEFT="15" NAME="m_axis_data_tdata" RIGHT="0" SIGIS="undef" SIGNAME="cic_compiler_imag_m_axis_data_tdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="iq_trigger_framer_0" PORT="s00_axis_tdata"/>
+            <CONNECTION INSTANCE="iq_framer_0" PORT="s00_axis_tdata"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="m_axis_data_tvalid" SIGIS="undef" SIGNAME="cic_compiler_imag_m_axis_data_tvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="iq_trigger_framer_0" PORT="s00_axis_tvalid"/>
+            <CONNECTION INSTANCE="iq_framer_0" PORT="s00_axis_tvalid"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="15" NAME="s_axis_data_tdata" RIGHT="0" SIGIS="undef" SIGNAME="cic_compiler_imag_s_axis_data_tdata">
@@ -2893,12 +2801,12 @@
         </PORT>
         <PORT DIR="O" LEFT="15" NAME="m_axis_data_tdata" RIGHT="0" SIGIS="undef" SIGNAME="cic_compiler_real_m_axis_data_tdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="iq_trigger_framer_0" PORT="s01_axis_tdata"/>
+            <CONNECTION INSTANCE="iq_framer_0" PORT="s01_axis_tdata"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="m_axis_data_tvalid" SIGIS="undef" SIGNAME="cic_compiler_real_m_axis_data_tvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="iq_trigger_framer_0" PORT="s01_axis_tvalid"/>
+            <CONNECTION INSTANCE="iq_framer_0" PORT="s01_axis_tvalid"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="15" NAME="s_axis_data_tdata" RIGHT="0" SIGIS="undef" SIGNAME="cic_compiler_real_s_axis_data_tdata">
@@ -3551,51 +3459,30 @@
             <CONNECTION INSTANCE="cic_compiler_real" PORT="aclk"/>
             <CONNECTION INSTANCE="cic_compiler_imag" PORT="aclk"/>
             <CONNECTION INSTANCE="axis_data_fifo_0" PORT="s_axis_aclk"/>
-            <CONNECTION INSTANCE="iq_trigger_framer_0" PORT="s00_axis_aclk"/>
-            <CONNECTION INSTANCE="iq_trigger_framer_0" PORT="s01_axis_aclk"/>
-            <CONNECTION INSTANCE="iq_trigger_framer_0" PORT="m00_axis_aclk"/>
+            <CONNECTION INSTANCE="iq_framer_0" PORT="s00_axis_aclk"/>
+            <CONNECTION INSTANCE="iq_framer_0" PORT="s01_axis_aclk"/>
+            <CONNECTION INSTANCE="iq_framer_0" PORT="m00_axis_aclk"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="0" FULLNAME="/ilslice_0" HWVERSION="2.0" INSTANCE="ilslice_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:2.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="DIN_FROM" VALUE="0"/>
-        <PARAMETER NAME="DIN_TO" VALUE="0"/>
-        <PARAMETER NAME="DIN_WIDTH" VALUE="4"/>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_ilslice_0_0"/>
-        <PARAMETER NAME="DOUT_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="I" LEFT="3" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_sw">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="sw"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="0" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="ilslice_0_Dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ram_0" PORT="trigger"/>
-            <CONNECTION INSTANCE="iq_trigger_framer_0" PORT="trigger"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE COREREVISION="4" FULLNAME="/iq_trigger_framer_0" HWVERSION="1.0" INSTANCE="iq_trigger_framer_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="iq_trigger_framer" VLNV="user.org:user:iq_trigger_framer:1.0">
+    <MODULE COREREVISION="3" FULLNAME="/iq_framer_0" HWVERSION="2.0" INSTANCE="iq_framer_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="iq_framer" VLNV="user.org:user:iq_framer:2.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="C_M00_AXIS_START_COUNT" VALUE="32"/>
         <PARAMETER NAME="C_M00_AXIS_TDATA_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_S00_AXIS_TDATA_WIDTH" VALUE="16"/>
         <PARAMETER NAME="C_S01_AXIS_TDATA_WIDTH" VALUE="16"/>
-        <PARAMETER NAME="N" VALUE="4096"/>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_iq_trigger_framer_0_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_iq_framer_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
+        <PORT DIR="I" LEFT="3" NAME="control" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_sw">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sw"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT CLKFREQUENCY="102400000" DIR="I" NAME="m00_axis_aclk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
           <CONNECTIONS>
             <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
@@ -3671,11 +3558,6 @@
             <CONNECTION INSTANCE="cic_compiler_real" PORT="m_axis_data_tvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="trigger" SIGIS="undef" SIGNAME="ilslice_0_Dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ilslice_0" PORT="Dout"/>
-          </CONNECTIONS>
-        </PORT>
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="cic_compiler_imag_M_AXIS_DATA" NAME="S00_AXIS" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
@@ -3718,7 +3600,7 @@
             <PORTMAP LOGICAL="TVALID" PHYSICAL="s01_axis_tvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="iq_trigger_framer_0_M00_AXIS" NAME="M00_AXIS" TYPE="MASTER" VLNV="xilinx.com:interface:axis:1.0">
+        <BUSINTERFACE BUSNAME="iq_framer_0_M00_AXIS" NAME="M00_AXIS" TYPE="MASTER" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_clk_wiz_0_0_clk_out1"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="102400000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
@@ -3776,12 +3658,10 @@
         <PORT DIR="O" NAME="mb_reset" POLARITY="ACTIVE_HIGH" SIGIS="rst"/>
         <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" POLARITY="ACTIVE_LOW" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_0_150_peripheral_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_smc" PORT="aresetn"/>
-            <CONNECTION INSTANCE="axi_smc_1" PORT="aresetn"/>
             <CONNECTION INSTANCE="axi_dma_0" PORT="axi_resetn"/>
             <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="s_axi_aresetn"/>
-            <CONNECTION INSTANCE="axi_ram_0" PORT="m00_axis_aresetn"/>
-            <CONNECTION INSTANCE="axi_ram_0" PORT="s00_axis_aresetn"/>
+            <CONNECTION INSTANCE="axi_smc" PORT="aresetn"/>
+            <CONNECTION INSTANCE="axi_smc_1" PORT="aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="peripheral_reset" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="rst"/>
@@ -3827,9 +3707,10 @@
         <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" POLARITY="ACTIVE_LOW" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_1_147_peripheral_aresetn">
           <CONNECTIONS>
             <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m2_axis_aresetn"/>
-            <CONNECTION INSTANCE="iq_trigger_framer_0" PORT="s00_axis_aresetn"/>
-            <CONNECTION INSTANCE="iq_trigger_framer_0" PORT="s01_axis_aresetn"/>
-            <CONNECTION INSTANCE="iq_trigger_framer_0" PORT="m00_axis_aresetn"/>
+            <CONNECTION INSTANCE="iq_framer_0" PORT="s00_axis_aresetn"/>
+            <CONNECTION INSTANCE="axis_data_fifo_0" PORT="s_axis_aresetn"/>
+            <CONNECTION INSTANCE="iq_framer_0" PORT="s01_axis_aresetn"/>
+            <CONNECTION INSTANCE="iq_framer_0" PORT="m00_axis_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="peripheral_reset" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="rst"/>
@@ -7926,17 +7807,15 @@
         <PORT CLKFREQUENCY="149999985" DIR="O" NAME="pl_clk0" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_dma_0" PORT="m_axi_s2mm_aclk"/>
-            <CONNECTION INSTANCE="axi_smc_1" PORT="aclk"/>
             <CONNECTION INSTANCE="axis_data_fifo_0" PORT="m_axis_aclk"/>
-            <CONNECTION INSTANCE="axi_ram_0" PORT="m00_axis_aclk"/>
-            <CONNECTION INSTANCE="axi_ram_0" PORT="s00_axis_aclk"/>
             <CONNECTION INSTANCE="axi_dma_0" PORT="s_axi_lite_aclk"/>
-            <CONNECTION INSTANCE="axi_smc" PORT="aclk"/>
             <CONNECTION INSTANCE="proc_sys_reset_0_150" PORT="slowest_sync_clk"/>
             <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxihpm0_fpd_aclk"/>
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxihpm1_fpd_aclk"/>
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxihp0_fpd_aclk"/>
+            <CONNECTION INSTANCE="axi_smc" PORT="aclk"/>
+            <CONNECTION INSTANCE="axi_smc_1" PORT="aclk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="0" NAME="pl_ps_irq0" RIGHT="0" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT"/>
