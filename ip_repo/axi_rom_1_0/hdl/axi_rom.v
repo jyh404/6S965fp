@@ -60,7 +60,7 @@
     end
   end*/
   
-  
+  // assume that everything is zero on start (reset) ...?
   //change of plan: we only process data if both are valid
   reg [1:0] rom_state;
   //state = 0: idling, not sending. can go to 1.
@@ -79,30 +79,29 @@
   always @(posedge m00_axis_aclk) begin
     case (rom_state)
         2'b00: begin
-            if (m00_axis_tready && (trigger == 1 || addra != 6'b0)) begin
+        // once trigger starts OR we have already begun, we look for data
+            if ((trigger == 1 || addra != 6'b0)) begin
                 rom_state <= 2'b01;
             end
             tvalid_buffer <= 1'b0;
             tlast_buffer <= 1'b0;
-            addra <= addra;
         end
         2'b01: begin
             rom_state <= 2'b10;
-            tvalid_buffer <= 1'b0;
-            tlast_buffer <= 1'b0;
-            addra <= addra;
         end
         2'b10: begin
             rom_state <= 2'b11;
             tvalid_buffer <= 1'b1;
             tlast_buffer <= (addra == ~6'b0) ? 1'b1 : 1'b0;
-            addra <= addra+1;
         end
         2'b11: begin
-            rom_state <= 2'b00;
-            tvalid_buffer <= 1'b0;
-            tlast_buffer <= 1'b0;
-            addra <= addra;
+        // only move on when downstream ready
+            if (m00_axis_tready) begin
+                rom_state <= 2'b00;
+                tvalid_buffer <= 1'b0;
+                tlast_buffer <= 1'b0;
+                addra <= addra + 1; // only now begin next rom query
+            end
         end
     endcase
   end

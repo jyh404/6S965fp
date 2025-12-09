@@ -68,7 +68,7 @@
       },
       "axi_rom_0": {
         "vlnv": "user.org:user:axi_rom:1.0",
-        "ip_revision": "10",
+        "ip_revision": "12",
         "xci_name": "design_1_axi_rom_0_0",
         "xci_path": "ip/design_1_axi_rom_0_0/design_1_axi_rom_0_0.xci",
         "inst_hier_path": "axi_rom_0",

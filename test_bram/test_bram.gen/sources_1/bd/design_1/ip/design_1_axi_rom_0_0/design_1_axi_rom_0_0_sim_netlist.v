@@ -2,10 +2,10 @@
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-// Date        : Mon Dec  8 18:12:24 2025
-// Host        : eecs-digital-44 running 64-bit Ubuntu 24.04.3 LTS
+// Date        : Mon Dec  8 19:21:14 2025
+// Host        : eecs-digital-35 running 64-bit Ubuntu 24.04.3 LTS
 // Command     : write_verilog -force -mode funcsim
-//               /home/aloy_ng/proj/6S965fp/test_bram/test_bram.gen/sources_1/bd/design_1/ip/design_1_axi_rom_0_0/design_1_axi_rom_0_0_sim_netlist.v
+//               /home/jhuang25/Documents/6.S965/6S965fp/test_bram/test_bram.gen/sources_1/bd/design_1/ip/design_1_axi_rom_0_0/design_1_axi_rom_0_0_sim_netlist.v
 // Design      : design_1_axi_rom_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -88,26 +88,26 @@ endmodule
 
 (* ORIG_REF_NAME = "axi_rom" *) 
 module design_1_axi_rom_0_0_axi_rom
-   (m00_axis_tvalid,
+   (m00_axis_tdata,
     m00_axis_tlast,
-    m00_axis_tdata,
+    m00_axis_tvalid,
     m00_axis_aclk,
-    trigger,
-    m00_axis_tready);
-  output m00_axis_tvalid;
-  output m00_axis_tlast;
+    m00_axis_tready,
+    trigger);
   output [7:0]m00_axis_tdata;
+  output m00_axis_tlast;
+  output m00_axis_tvalid;
   input m00_axis_aclk;
-  input trigger;
   input m00_axis_tready;
+  input trigger;
 
   wire \FSM_onehot_rom_state[3]_i_1_n_0 ;
   wire \FSM_onehot_rom_state[3]_i_2_n_0 ;
-  wire \FSM_onehot_rom_state[3]_i_3_n_0 ;
-  wire \FSM_onehot_rom_state_reg_n_0_[0] ;
   wire \FSM_onehot_rom_state_reg_n_0_[1] ;
+  wire \FSM_onehot_rom_state_reg_n_0_[2] ;
   wire \FSM_onehot_rom_state_reg_n_0_[3] ;
   wire \addra[2]_i_1_n_0 ;
+  wire \addra[5]_i_1_n_0 ;
   wire [5:0]addra_reg;
   wire m00_axis_aclk;
   wire [7:0]m00_axis_tdata;
@@ -115,37 +115,32 @@ module design_1_axi_rom_0_0_axi_rom
   wire m00_axis_tready;
   wire m00_axis_tvalid;
   wire [5:0]p_0_in;
-  wire tlast_buffer;
+  wire tlast_buffer0;
+  wire tlast_buffer_i_1_n_0;
   wire tlast_buffer_i_2_n_0;
   wire trigger;
-  wire tvalid_buffer;
+  wire tvalid_buffer_i_1_n_0;
 
   LUT6 #(
-    .INIT(64'hFFFFFFFFEEEAAAAA)) 
+    .INIT(64'hFFFEFFFEFFFEFEFE)) 
     \FSM_onehot_rom_state[3]_i_1 
-       (.I0(\FSM_onehot_rom_state[3]_i_2_n_0 ),
-        .I1(\FSM_onehot_rom_state_reg_n_0_[0] ),
-        .I2(trigger),
-        .I3(\FSM_onehot_rom_state[3]_i_3_n_0 ),
-        .I4(m00_axis_tready),
-        .I5(\FSM_onehot_rom_state_reg_n_0_[1] ),
+       (.I0(\FSM_onehot_rom_state_reg_n_0_[1] ),
+        .I1(\FSM_onehot_rom_state_reg_n_0_[2] ),
+        .I2(\addra[5]_i_1_n_0 ),
+        .I3(tlast_buffer0),
+        .I4(\FSM_onehot_rom_state[3]_i_2_n_0 ),
+        .I5(trigger),
         .O(\FSM_onehot_rom_state[3]_i_1_n_0 ));
-  LUT2 #(
-    .INIT(4'hE)) 
-    \FSM_onehot_rom_state[3]_i_2 
-       (.I0(\FSM_onehot_rom_state_reg_n_0_[3] ),
-        .I1(tvalid_buffer),
-        .O(\FSM_onehot_rom_state[3]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFFFFFFFFFFFFE)) 
-    \FSM_onehot_rom_state[3]_i_3 
+    \FSM_onehot_rom_state[3]_i_2 
        (.I0(addra_reg[5]),
         .I1(addra_reg[4]),
         .I2(addra_reg[1]),
         .I3(addra_reg[0]),
         .I4(addra_reg[3]),
         .I5(addra_reg[2]),
-        .O(\FSM_onehot_rom_state[3]_i_3_n_0 ));
+        .O(\FSM_onehot_rom_state[3]_i_2_n_0 ));
   (* FSM_ENCODED_STATES = "iSTATE:0001,iSTATE0:0010,iSTATE1:0100,iSTATE2:1000" *) 
   FDRE #(
     .INIT(1'b1)) 
@@ -153,7 +148,7 @@ module design_1_axi_rom_0_0_axi_rom
        (.C(m00_axis_aclk),
         .CE(\FSM_onehot_rom_state[3]_i_1_n_0 ),
         .D(\FSM_onehot_rom_state_reg_n_0_[3] ),
-        .Q(\FSM_onehot_rom_state_reg_n_0_[0] ),
+        .Q(tlast_buffer0),
         .R(1'b0));
   (* FSM_ENCODED_STATES = "iSTATE:0001,iSTATE0:0010,iSTATE1:0100,iSTATE2:1000" *) 
   FDRE #(
@@ -161,7 +156,7 @@ module design_1_axi_rom_0_0_axi_rom
     \FSM_onehot_rom_state_reg[1] 
        (.C(m00_axis_aclk),
         .CE(\FSM_onehot_rom_state[3]_i_1_n_0 ),
-        .D(\FSM_onehot_rom_state_reg_n_0_[0] ),
+        .D(tlast_buffer0),
         .Q(\FSM_onehot_rom_state_reg_n_0_[1] ),
         .R(1'b0));
   (* FSM_ENCODED_STATES = "iSTATE:0001,iSTATE0:0010,iSTATE1:0100,iSTATE2:1000" *) 
@@ -171,7 +166,7 @@ module design_1_axi_rom_0_0_axi_rom
        (.C(m00_axis_aclk),
         .CE(\FSM_onehot_rom_state[3]_i_1_n_0 ),
         .D(\FSM_onehot_rom_state_reg_n_0_[1] ),
-        .Q(tvalid_buffer),
+        .Q(\FSM_onehot_rom_state_reg_n_0_[2] ),
         .R(1'b0));
   (* FSM_ENCODED_STATES = "iSTATE:0001,iSTATE0:0010,iSTATE1:0100,iSTATE2:1000" *) 
   FDRE #(
@@ -179,10 +174,9 @@ module design_1_axi_rom_0_0_axi_rom
     \FSM_onehot_rom_state_reg[3] 
        (.C(m00_axis_aclk),
         .CE(\FSM_onehot_rom_state[3]_i_1_n_0 ),
-        .D(tvalid_buffer),
+        .D(\FSM_onehot_rom_state_reg_n_0_[2] ),
         .Q(\FSM_onehot_rom_state_reg_n_0_[3] ),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \addra[0]_i_1 
@@ -222,9 +216,15 @@ module design_1_axi_rom_0_0_axi_rom
         .I3(addra_reg[3]),
         .I4(addra_reg[4]),
         .O(p_0_in[4]));
+  LUT2 #(
+    .INIT(4'h8)) 
+    \addra[5]_i_1 
+       (.I0(\FSM_onehot_rom_state_reg_n_0_[3] ),
+        .I1(m00_axis_tready),
+        .O(\addra[5]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'h7FFFFFFF80000000)) 
-    \addra[5]_i_1 
+    \addra[5]_i_2 
        (.I0(addra_reg[3]),
         .I1(addra_reg[1]),
         .I2(addra_reg[0]),
@@ -234,67 +234,79 @@ module design_1_axi_rom_0_0_axi_rom
         .O(p_0_in[5]));
   FDRE \addra_reg[0] 
        (.C(m00_axis_aclk),
-        .CE(tvalid_buffer),
+        .CE(\addra[5]_i_1_n_0 ),
         .D(p_0_in[0]),
         .Q(addra_reg[0]),
         .R(1'b0));
   FDRE \addra_reg[1] 
        (.C(m00_axis_aclk),
-        .CE(tvalid_buffer),
+        .CE(\addra[5]_i_1_n_0 ),
         .D(p_0_in[1]),
         .Q(addra_reg[1]),
         .R(1'b0));
   FDRE \addra_reg[2] 
        (.C(m00_axis_aclk),
-        .CE(tvalid_buffer),
+        .CE(\addra[5]_i_1_n_0 ),
         .D(\addra[2]_i_1_n_0 ),
         .Q(addra_reg[2]),
         .R(1'b0));
   FDRE \addra_reg[3] 
        (.C(m00_axis_aclk),
-        .CE(tvalid_buffer),
+        .CE(\addra[5]_i_1_n_0 ),
         .D(p_0_in[3]),
         .Q(addra_reg[3]),
         .R(1'b0));
   FDRE \addra_reg[4] 
        (.C(m00_axis_aclk),
-        .CE(tvalid_buffer),
+        .CE(\addra[5]_i_1_n_0 ),
         .D(p_0_in[4]),
         .Q(addra_reg[4]),
         .R(1'b0));
   FDRE \addra_reg[5] 
        (.C(m00_axis_aclk),
-        .CE(tvalid_buffer),
+        .CE(\addra[5]_i_1_n_0 ),
         .D(p_0_in[5]),
         .Q(addra_reg[5]),
         .R(1'b0));
   LUT6 #(
-    .INIT(64'h0080000000000000)) 
+    .INIT(64'h00000000FF2A002A)) 
     tlast_buffer_i_1
-       (.I0(tvalid_buffer),
-        .I1(addra_reg[2]),
-        .I2(addra_reg[3]),
-        .I3(tlast_buffer_i_2_n_0),
-        .I4(addra_reg[4]),
-        .I5(addra_reg[5]),
-        .O(tlast_buffer));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT2 #(
-    .INIT(4'h7)) 
+       (.I0(m00_axis_tlast),
+        .I1(\FSM_onehot_rom_state_reg_n_0_[3] ),
+        .I2(m00_axis_tready),
+        .I3(\FSM_onehot_rom_state_reg_n_0_[2] ),
+        .I4(tlast_buffer_i_2_n_0),
+        .I5(tlast_buffer0),
+        .O(tlast_buffer_i_1_n_0));
+  LUT6 #(
+    .INIT(64'h8000000000000000)) 
     tlast_buffer_i_2
-       (.I0(addra_reg[1]),
-        .I1(addra_reg[0]),
+       (.I0(addra_reg[5]),
+        .I1(addra_reg[4]),
+        .I2(addra_reg[1]),
+        .I3(addra_reg[0]),
+        .I4(addra_reg[3]),
+        .I5(addra_reg[2]),
         .O(tlast_buffer_i_2_n_0));
   FDRE tlast_buffer_reg
        (.C(m00_axis_aclk),
         .CE(1'b1),
-        .D(tlast_buffer),
+        .D(tlast_buffer_i_1_n_0),
         .Q(m00_axis_tlast),
         .R(1'b0));
+  LUT5 #(
+    .INIT(32'hFF15FF00)) 
+    tvalid_buffer_i_1
+       (.I0(tlast_buffer0),
+        .I1(\FSM_onehot_rom_state_reg_n_0_[3] ),
+        .I2(m00_axis_tready),
+        .I3(\FSM_onehot_rom_state_reg_n_0_[2] ),
+        .I4(m00_axis_tvalid),
+        .O(tvalid_buffer_i_1_n_0));
   FDRE tvalid_buffer_reg
        (.C(m00_axis_aclk),
         .CE(1'b1),
-        .D(tvalid_buffer),
+        .D(tvalid_buffer_i_1_n_0),
         .Q(m00_axis_tvalid),
         .R(1'b0));
   design_1_axi_rom_0_0_xilinx_single_port_ram_read_first your_instance_name

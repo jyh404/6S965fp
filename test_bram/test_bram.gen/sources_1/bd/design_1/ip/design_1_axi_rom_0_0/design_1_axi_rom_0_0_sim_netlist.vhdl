@@ -2,10 +2,10 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
--- Date        : Mon Dec  8 18:12:24 2025
--- Host        : eecs-digital-44 running 64-bit Ubuntu 24.04.3 LTS
+-- Date        : Mon Dec  8 19:21:15 2025
+-- Host        : eecs-digital-35 running 64-bit Ubuntu 24.04.3 LTS
 -- Command     : write_vhdl -force -mode funcsim
---               /home/aloy_ng/proj/6S965fp/test_bram/test_bram.gen/sources_1/bd/design_1/ip/design_1_axi_rom_0_0/design_1_axi_rom_0_0_sim_netlist.vhdl
+--               /home/jhuang25/Documents/6.S965/6S965fp/test_bram/test_bram.gen/sources_1/bd/design_1/ip/design_1_axi_rom_0_0/design_1_axi_rom_0_0_sim_netlist.vhdl
 -- Design      : design_1_axi_rom_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -421,12 +421,12 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity design_1_axi_rom_0_0_axi_rom is
   port (
-    m00_axis_tvalid : out STD_LOGIC;
-    m00_axis_tlast : out STD_LOGIC;
     m00_axis_tdata : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    m00_axis_tlast : out STD_LOGIC;
+    m00_axis_tvalid : out STD_LOGIC;
     m00_axis_aclk : in STD_LOGIC;
-    trigger : in STD_LOGIC;
-    m00_axis_tready : in STD_LOGIC
+    m00_axis_tready : in STD_LOGIC;
+    trigger : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of design_1_axi_rom_0_0_axi_rom : entity is "axi_rom";
@@ -435,52 +435,46 @@ end design_1_axi_rom_0_0_axi_rom;
 architecture STRUCTURE of design_1_axi_rom_0_0_axi_rom is
   signal \FSM_onehot_rom_state[3]_i_1_n_0\ : STD_LOGIC;
   signal \FSM_onehot_rom_state[3]_i_2_n_0\ : STD_LOGIC;
-  signal \FSM_onehot_rom_state[3]_i_3_n_0\ : STD_LOGIC;
-  signal \FSM_onehot_rom_state_reg_n_0_[0]\ : STD_LOGIC;
   signal \FSM_onehot_rom_state_reg_n_0_[1]\ : STD_LOGIC;
+  signal \FSM_onehot_rom_state_reg_n_0_[2]\ : STD_LOGIC;
   signal \FSM_onehot_rom_state_reg_n_0_[3]\ : STD_LOGIC;
   signal \addra[2]_i_1_n_0\ : STD_LOGIC;
+  signal \addra[5]_i_1_n_0\ : STD_LOGIC;
   signal addra_reg : STD_LOGIC_VECTOR ( 5 downto 0 );
+  signal \^m00_axis_tlast\ : STD_LOGIC;
+  signal \^m00_axis_tvalid\ : STD_LOGIC;
   signal p_0_in : STD_LOGIC_VECTOR ( 5 downto 0 );
-  signal tlast_buffer : STD_LOGIC;
+  signal tlast_buffer0 : STD_LOGIC;
+  signal tlast_buffer_i_1_n_0 : STD_LOGIC;
   signal tlast_buffer_i_2_n_0 : STD_LOGIC;
-  signal tvalid_buffer : STD_LOGIC;
+  signal tvalid_buffer_i_1_n_0 : STD_LOGIC;
   attribute FSM_ENCODED_STATES : string;
   attribute FSM_ENCODED_STATES of \FSM_onehot_rom_state_reg[0]\ : label is "iSTATE:0001,iSTATE0:0010,iSTATE1:0100,iSTATE2:1000";
   attribute FSM_ENCODED_STATES of \FSM_onehot_rom_state_reg[1]\ : label is "iSTATE:0001,iSTATE0:0010,iSTATE1:0100,iSTATE2:1000";
   attribute FSM_ENCODED_STATES of \FSM_onehot_rom_state_reg[2]\ : label is "iSTATE:0001,iSTATE0:0010,iSTATE1:0100,iSTATE2:1000";
   attribute FSM_ENCODED_STATES of \FSM_onehot_rom_state_reg[3]\ : label is "iSTATE:0001,iSTATE0:0010,iSTATE1:0100,iSTATE2:1000";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \addra[0]_i_1\ : label is "soft_lutpair2";
   attribute SOFT_HLUTNM of \addra[1]_i_1\ : label is "soft_lutpair1";
   attribute SOFT_HLUTNM of \addra[2]_i_1\ : label is "soft_lutpair1";
   attribute SOFT_HLUTNM of \addra[3]_i_1\ : label is "soft_lutpair0";
   attribute SOFT_HLUTNM of \addra[4]_i_1\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of tlast_buffer_i_2 : label is "soft_lutpair2";
 begin
+  m00_axis_tlast <= \^m00_axis_tlast\;
+  m00_axis_tvalid <= \^m00_axis_tvalid\;
 \FSM_onehot_rom_state[3]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFFEEEAAAAA"
+      INIT => X"FFFEFFFEFFFEFEFE"
     )
         port map (
-      I0 => \FSM_onehot_rom_state[3]_i_2_n_0\,
-      I1 => \FSM_onehot_rom_state_reg_n_0_[0]\,
-      I2 => trigger,
-      I3 => \FSM_onehot_rom_state[3]_i_3_n_0\,
-      I4 => m00_axis_tready,
-      I5 => \FSM_onehot_rom_state_reg_n_0_[1]\,
+      I0 => \FSM_onehot_rom_state_reg_n_0_[1]\,
+      I1 => \FSM_onehot_rom_state_reg_n_0_[2]\,
+      I2 => \addra[5]_i_1_n_0\,
+      I3 => tlast_buffer0,
+      I4 => \FSM_onehot_rom_state[3]_i_2_n_0\,
+      I5 => trigger,
       O => \FSM_onehot_rom_state[3]_i_1_n_0\
     );
-\FSM_onehot_rom_state[3]_i_2\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"E"
-    )
-        port map (
-      I0 => \FSM_onehot_rom_state_reg_n_0_[3]\,
-      I1 => tvalid_buffer,
-      O => \FSM_onehot_rom_state[3]_i_2_n_0\
-    );
-\FSM_onehot_rom_state[3]_i_3\: unisim.vcomponents.LUT6
+\FSM_onehot_rom_state[3]_i_2\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"FFFFFFFFFFFFFFFE"
     )
@@ -491,7 +485,7 @@ begin
       I3 => addra_reg(0),
       I4 => addra_reg(3),
       I5 => addra_reg(2),
-      O => \FSM_onehot_rom_state[3]_i_3_n_0\
+      O => \FSM_onehot_rom_state[3]_i_2_n_0\
     );
 \FSM_onehot_rom_state_reg[0]\: unisim.vcomponents.FDRE
     generic map(
@@ -501,7 +495,7 @@ begin
       C => m00_axis_aclk,
       CE => \FSM_onehot_rom_state[3]_i_1_n_0\,
       D => \FSM_onehot_rom_state_reg_n_0_[3]\,
-      Q => \FSM_onehot_rom_state_reg_n_0_[0]\,
+      Q => tlast_buffer0,
       R => '0'
     );
 \FSM_onehot_rom_state_reg[1]\: unisim.vcomponents.FDRE
@@ -511,7 +505,7 @@ begin
         port map (
       C => m00_axis_aclk,
       CE => \FSM_onehot_rom_state[3]_i_1_n_0\,
-      D => \FSM_onehot_rom_state_reg_n_0_[0]\,
+      D => tlast_buffer0,
       Q => \FSM_onehot_rom_state_reg_n_0_[1]\,
       R => '0'
     );
@@ -523,7 +517,7 @@ begin
       C => m00_axis_aclk,
       CE => \FSM_onehot_rom_state[3]_i_1_n_0\,
       D => \FSM_onehot_rom_state_reg_n_0_[1]\,
-      Q => tvalid_buffer,
+      Q => \FSM_onehot_rom_state_reg_n_0_[2]\,
       R => '0'
     );
 \FSM_onehot_rom_state_reg[3]\: unisim.vcomponents.FDRE
@@ -533,7 +527,7 @@ begin
         port map (
       C => m00_axis_aclk,
       CE => \FSM_onehot_rom_state[3]_i_1_n_0\,
-      D => tvalid_buffer,
+      D => \FSM_onehot_rom_state_reg_n_0_[2]\,
       Q => \FSM_onehot_rom_state_reg_n_0_[3]\,
       R => '0'
     );
@@ -587,7 +581,16 @@ begin
       I4 => addra_reg(4),
       O => p_0_in(4)
     );
-\addra[5]_i_1\: unisim.vcomponents.LUT6
+\addra[5]_i_1\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => \FSM_onehot_rom_state_reg_n_0_[3]\,
+      I1 => m00_axis_tready,
+      O => \addra[5]_i_1_n_0\
+    );
+\addra[5]_i_2\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"7FFFFFFF80000000"
     )
@@ -603,7 +606,7 @@ begin
 \addra_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => m00_axis_aclk,
-      CE => tvalid_buffer,
+      CE => \addra[5]_i_1_n_0\,
       D => p_0_in(0),
       Q => addra_reg(0),
       R => '0'
@@ -611,7 +614,7 @@ begin
 \addra_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => m00_axis_aclk,
-      CE => tvalid_buffer,
+      CE => \addra[5]_i_1_n_0\,
       D => p_0_in(1),
       Q => addra_reg(1),
       R => '0'
@@ -619,7 +622,7 @@ begin
 \addra_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => m00_axis_aclk,
-      CE => tvalid_buffer,
+      CE => \addra[5]_i_1_n_0\,
       D => \addra[2]_i_1_n_0\,
       Q => addra_reg(2),
       R => '0'
@@ -627,7 +630,7 @@ begin
 \addra_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => m00_axis_aclk,
-      CE => tvalid_buffer,
+      CE => \addra[5]_i_1_n_0\,
       D => p_0_in(3),
       Q => addra_reg(3),
       R => '0'
@@ -635,7 +638,7 @@ begin
 \addra_reg[4]\: unisim.vcomponents.FDRE
      port map (
       C => m00_axis_aclk,
-      CE => tvalid_buffer,
+      CE => \addra[5]_i_1_n_0\,
       D => p_0_in(4),
       Q => addra_reg(4),
       R => '0'
@@ -643,47 +646,63 @@ begin
 \addra_reg[5]\: unisim.vcomponents.FDRE
      port map (
       C => m00_axis_aclk,
-      CE => tvalid_buffer,
+      CE => \addra[5]_i_1_n_0\,
       D => p_0_in(5),
       Q => addra_reg(5),
       R => '0'
     );
 tlast_buffer_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0080000000000000"
+      INIT => X"00000000FF2A002A"
     )
         port map (
-      I0 => tvalid_buffer,
-      I1 => addra_reg(2),
-      I2 => addra_reg(3),
-      I3 => tlast_buffer_i_2_n_0,
-      I4 => addra_reg(4),
-      I5 => addra_reg(5),
-      O => tlast_buffer
+      I0 => \^m00_axis_tlast\,
+      I1 => \FSM_onehot_rom_state_reg_n_0_[3]\,
+      I2 => m00_axis_tready,
+      I3 => \FSM_onehot_rom_state_reg_n_0_[2]\,
+      I4 => tlast_buffer_i_2_n_0,
+      I5 => tlast_buffer0,
+      O => tlast_buffer_i_1_n_0
     );
-tlast_buffer_i_2: unisim.vcomponents.LUT2
+tlast_buffer_i_2: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"7"
+      INIT => X"8000000000000000"
     )
         port map (
-      I0 => addra_reg(1),
-      I1 => addra_reg(0),
+      I0 => addra_reg(5),
+      I1 => addra_reg(4),
+      I2 => addra_reg(1),
+      I3 => addra_reg(0),
+      I4 => addra_reg(3),
+      I5 => addra_reg(2),
       O => tlast_buffer_i_2_n_0
     );
 tlast_buffer_reg: unisim.vcomponents.FDRE
      port map (
       C => m00_axis_aclk,
       CE => '1',
-      D => tlast_buffer,
-      Q => m00_axis_tlast,
+      D => tlast_buffer_i_1_n_0,
+      Q => \^m00_axis_tlast\,
       R => '0'
+    );
+tvalid_buffer_i_1: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FF15FF00"
+    )
+        port map (
+      I0 => tlast_buffer0,
+      I1 => \FSM_onehot_rom_state_reg_n_0_[3]\,
+      I2 => m00_axis_tready,
+      I3 => \FSM_onehot_rom_state_reg_n_0_[2]\,
+      I4 => \^m00_axis_tvalid\,
+      O => tvalid_buffer_i_1_n_0
     );
 tvalid_buffer_reg: unisim.vcomponents.FDRE
      port map (
       C => m00_axis_aclk,
       CE => '1',
-      D => tvalid_buffer,
-      Q => m00_axis_tvalid,
+      D => tvalid_buffer_i_1_n_0,
+      Q => \^m00_axis_tvalid\,
       R => '0'
     );
 your_instance_name: entity work.design_1_axi_rom_0_0_xilinx_single_port_ram_read_first
