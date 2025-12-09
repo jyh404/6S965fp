@@ -4,10 +4,10 @@
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.                   -->
 <!-- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.   -->
 
-<Project Product="Vivado" Version="7" Minor="70" Path="/home/aloy_ng/fpga/week6/project_1/project_1.tmp/iq_framer_v1_0_project/iq_framer_v1_0_project.xpr">
+<Project Product="Vivado" Version="7" Minor="70" Path="/home/aloy_ng/proj/6S965fp/project_1/project_1/project_1.tmp/iq_framer_v1_0_project/iq_framer_v1_0_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="ed650120518c4b61a41197aae6e096fd"/>
+    <Option Name="Id" Val="a812c51bacb341b491865360b927cb37"/>
     <Option Name="Part" Val="xczu48dr-ffvg1517-2-e"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -47,7 +47,7 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../../../ip_repo/iq_framer_1_0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../ip_repo"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPDefaultOutputPath" Val="$PGENDIR/sources_1"/>
     <Option Name="IPCachePermission" Val="read"/>
@@ -91,7 +91,7 @@
   <FileSets Version="1" Minor="32">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PPRDIR/../../../ip_repo/iq_framer_1_0/hdl/iq_framer.v">
+      <File Path="$PPRDIR/../../../../ip_repo/iq_framer_1_0/hdl/iq_framer.v">
         <FileInfo>
           <Attr Name="Library" Val=""/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -99,13 +99,13 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../ip_repo/iq_framer_1_0/component.xml">
+      <File Path="$PPRDIR/../../../../ip_repo/iq_framer_1_0/component.xml">
         <FileInfo SFType="IPXACT"/>
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="iq_framer"/>
-        <Option Name="TopRTLFile" Val="$PPRDIR/../../../ip_repo/iq_framer_1_0/hdl/iq_framer.v"/>
+        <Option Name="TopRTLFile" Val="$PPRDIR/../../../../ip_repo/iq_framer_1_0/hdl/iq_framer.v"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
