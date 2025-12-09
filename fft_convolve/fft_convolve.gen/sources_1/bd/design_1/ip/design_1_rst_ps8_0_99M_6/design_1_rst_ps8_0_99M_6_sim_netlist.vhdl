@@ -2,11 +2,11 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
--- Date        : Sun Dec  7 15:56:13 2025
+-- Date        : Tue Dec  9 10:49:41 2025
 -- Host        : eecs-digital-35 running 64-bit Ubuntu 24.04.3 LTS
 -- Command     : write_vhdl -force -mode funcsim -rename_top design_1_rst_ps8_0_99M_6 -prefix
---               design_1_rst_ps8_0_99M_6_ design_1_rst_ps8_0_99M_2_sim_netlist.vhdl
--- Design      : design_1_rst_ps8_0_99M_2
+--               design_1_rst_ps8_0_99M_6_ design_1_rst_ps8_0_99M_6_sim_netlist.vhdl
+-- Design      : design_1_rst_ps8_0_99M_6
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
 -- Device      : xczu48dr-ffvg1517-2-e
@@ -1065,7 +1065,7 @@ entity design_1_rst_ps8_0_99M_6 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of design_1_rst_ps8_0_99M_6 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of design_1_rst_ps8_0_99M_6 : entity is "design_1_rst_ps8_0_99M_2,proc_sys_reset,{}";
+  attribute CHECK_LICENSE_TYPE of design_1_rst_ps8_0_99M_6 : entity is "design_1_rst_ps8_0_99M_6,proc_sys_reset,{}";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of design_1_rst_ps8_0_99M_6 : entity is "yes";
   attribute x_core_info : string;
@@ -1108,7 +1108,7 @@ architecture STRUCTURE of design_1_rst_ps8_0_99M_6 is
   attribute x_interface_parameter of mb_reset : signal is "XIL_INTERFACENAME mb_rst, POLARITY ACTIVE_HIGH, TYPE PROCESSOR, INSERT_VIP 0";
   attribute x_interface_info of slowest_sync_clk : signal is "xilinx.com:signal:clock:1.0 clock CLK";
   attribute x_interface_mode of slowest_sync_clk : signal is "slave clock";
-  attribute x_interface_parameter of slowest_sync_clk : signal is "XIL_INTERFACENAME clock, ASSOCIATED_RESET mb_reset:bus_struct_reset:interconnect_aresetn:peripheral_aresetn:peripheral_reset, FREQ_HZ 99999985, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_zynq_ultra_ps_e_0_2_pl_clk0, INSERT_VIP 0";
+  attribute x_interface_parameter of slowest_sync_clk : signal is "XIL_INTERFACENAME clock, ASSOCIATED_RESET mb_reset:bus_struct_reset:interconnect_aresetn:peripheral_aresetn:peripheral_reset, FREQ_HZ 149999969, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_zynq_ultra_ps_e_0_2_pl_clk0, INSERT_VIP 0";
   attribute x_interface_info of bus_struct_reset : signal is "xilinx.com:signal:reset:1.0 bus_struct_reset RST";
   attribute x_interface_mode of bus_struct_reset : signal is "master bus_struct_reset";
   attribute x_interface_parameter of bus_struct_reset : signal is "XIL_INTERFACENAME bus_struct_reset, POLARITY ACTIVE_HIGH, TYPE INTERCONNECT, INSERT_VIP 0";

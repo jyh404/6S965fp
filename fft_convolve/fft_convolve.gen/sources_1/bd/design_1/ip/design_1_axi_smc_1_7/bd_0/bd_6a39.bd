@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x595460864F79B82B",
+      "boundary_crc": "0x59546086886DE7F6",
       "design_src": "SBD",
       "device": "xczu48dr-ffvg1517-2-e",
       "name": "bd_6a39",
@@ -127,7 +127,7 @@
             "value_src": "auto_prop"
           },
           "FREQ_HZ": {
-            "value": "99999985",
+            "value": "149999969",
             "value_src": "user_prop"
           },
           "HAS_BRESP": {
@@ -268,7 +268,7 @@
             "value_src": "auto_prop"
           },
           "FREQ_HZ": {
-            "value": "99999985",
+            "value": "149999969",
             "value_src": "user_prop"
           },
           "HAS_BRESP": {
@@ -409,7 +409,7 @@
             "value_src": "auto_prop"
           },
           "FREQ_HZ": {
-            "value": "99999985",
+            "value": "149999969",
             "value_src": "user_prop"
           },
           "HAS_BRESP": {
@@ -550,7 +550,7 @@
             "value_src": "auto_prop"
           },
           "FREQ_HZ": {
-            "value": "99999985",
+            "value": "149999969",
             "value_src": "user_prop"
           },
           "HAS_BRESP": {
@@ -691,7 +691,7 @@
             "value_src": "auto_prop"
           },
           "FREQ_HZ": {
-            "value": "99999985",
+            "value": "149999969",
             "value_src": "user_prop"
           },
           "HAS_BRESP": {
@@ -832,7 +832,7 @@
             "value_src": "auto_prop"
           },
           "FREQ_HZ": {
-            "value": "99999985",
+            "value": "149999969",
             "value_src": "user_prop"
           },
           "HAS_BRESP": {
@@ -973,7 +973,7 @@
             "value_src": "ip"
           },
           "FREQ_HZ": {
-            "value": "99999985",
+            "value": "149999969",
             "value_src": "user_prop"
           },
           "HAS_BRESP": {
@@ -1085,7 +1085,7 @@
             "value_src": "default_prop"
           },
           "FREQ_HZ": {
-            "value": "99999985",
+            "value": "149999969",
             "value_src": "user_prop"
           },
           "FREQ_TOLERANCE_HZ": {

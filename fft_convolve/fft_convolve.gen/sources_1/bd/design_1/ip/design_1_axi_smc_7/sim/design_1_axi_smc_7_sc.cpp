@@ -84,6 +84,8 @@ design_1_axi_smc_7_sc::design_1_axi_smc_7_sc(const sc_core::sc_module_name& nm) 
   M04_AXI_tlm_aximm_write_socket = mp_impl->M04_AXI_tlm_aximm_write_socket;
   M05_AXI_tlm_aximm_read_socket = mp_impl->M05_AXI_tlm_aximm_read_socket;
   M05_AXI_tlm_aximm_write_socket = mp_impl->M05_AXI_tlm_aximm_write_socket;
+  M06_AXI_tlm_aximm_read_socket = mp_impl->M06_AXI_tlm_aximm_read_socket;
+  M06_AXI_tlm_aximm_write_socket = mp_impl->M06_AXI_tlm_aximm_write_socket;
 }
 
 design_1_axi_smc_7_sc::~design_1_axi_smc_7_sc()

@@ -2,9 +2,10 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "xfft_4096",
+    "cell_name": "fft_prn",
     "component_reference": "xilinx.com:ip:xfft:9.1",
     "ip_revision": "14",
-    "gen_directory": ".",
+    "gen_directory": "../../../../fft_convolve/fft_convolve.tmp/fft_convolve_v4_0_project/fft_convolve_v4_0_project.gen/sources_1/ip/xfft_4096",
     "parameters": {
       "component_parameters": {
         "Component_Name": [ { "value": "xfft_4096", "resolve_type": "user", "usage": "all" } ],
@@ -93,11 +94,11 @@
         "IPCONTEXT": [ { "value": "IP_Flow" } ],
         "IPREVISION": [ { "value": "14" } ],
         "MANAGED": [ { "value": "TRUE" } ],
-        "OUTPUTDIR": [ { "value": "." } ],
+        "OUTPUTDIR": [ { "value": "../../../../fft_convolve/fft_convolve.tmp/fft_convolve_v4_0_project/fft_convolve_v4_0_project.gen/sources_1/ip/xfft_4096" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "." } ],
         "SWVERSION": [ { "value": "2025.1" } ],
-        "SYNTHESISFLOW": [ { "value": "OUT_OF_CONTEXT" } ]
+        "SYNTHESISFLOW": [ { "value": "GLOBAL" } ]
       }
     },
     "boundary": {
