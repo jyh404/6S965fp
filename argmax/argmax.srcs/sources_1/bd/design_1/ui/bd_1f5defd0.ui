@@ -1,0 +1,91 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.08304",
+   "Default View_TopLeft":"3185,-54",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+preplace port sysref_in -pg 1 -lvl 0 -x -20 -y 720 -defaultsOSRD
+preplace port adc2_clk -pg 1 -lvl 0 -x -20 -y 780 -defaultsOSRD
+preplace port vin2_01 -pg 1 -lvl 0 -x -20 -y 750 -defaultsOSRD
+preplace portBus led -pg 1 -lvl 11 -x 4320 -y -110 -defaultsOSRD
+preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 6 -x 2090 -y 1240 -defaultsOSRD
+preplace inst axi_dma_0 -pg 1 -lvl 8 -x 3390 -y 1010 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 3 -x 900 -y 770 -defaultsOSRD
+preplace inst axis_data_fifo_0 -pg 1 -lvl 6 -x 2090 -y 1040 -defaultsOSRD
+preplace inst proc_sys_reset_0_150 -pg 1 -lvl 1 -x 210 -y 1060 -defaultsOSRD
+preplace inst proc_sys_reset_1_147 -pg 1 -lvl 1 -x 210 -y 860 -defaultsOSRD
+preplace inst usp_rf_data_converter_0 -pg 1 -lvl 2 -x 580 -y 780 -defaultsOSRD
+preplace inst cic_compiler_1 -pg 1 -lvl 4 -x 1220 -y 700 -defaultsOSRD
+preplace inst cic_compiler_2 -pg 1 -lvl 4 -x 1220 -y 840 -defaultsOSRD
+preplace inst iq_trigger_framer_0 -pg 1 -lvl 5 -x 1550 -y 780 -defaultsOSRD
+preplace inst axi_rom_0 -pg 1 -lvl 7 -x 2670 -y 520 -defaultsOSRD
+preplace inst axi_ram_0 -pg 1 -lvl 7 -x 2670 -y 940 -defaultsOSRD
+preplace inst fft_convolve_0 -pg 1 -lvl 8 -x 3390 -y 650 -defaultsOSRD
+preplace inst mmio_interface -pg 1 -lvl 6 -x 2090 -y 850 -defaultsOSRD
+preplace inst axi_prn_config -pg 1 -lvl 6 -x 2090 -y 350 -defaultsOSRD
+preplace inst axi_iq_config -pg 1 -lvl 6 -x 2090 -y 510 -defaultsOSRD
+preplace inst axi_ifft_config -pg 1 -lvl 6 -x 2090 -y 670 -defaultsOSRD
+preplace inst xpm_cdc_gen_0 -pg 1 -lvl 5 -x 1550 -y 540 -defaultsOSRD
+preplace inst ilconcat_0 -pg 1 -lvl 7 -x 2670 -y 10 -defaultsOSRD
+preplace inst ilconstant_0 -pg 1 -lvl 6 -x 2090 -y -80 -defaultsOSRD
+preplace inst axi_smc_1 -pg 1 -lvl 9 -x 3830 -y 1010 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 7 -x 2670 -y 720 -defaultsOSRD
+preplace inst argmax_0 -pg 1 -lvl 10 -x 4160 -y 700 -defaultsOSRD
+preplace inst axi_dma_1 -pg 1 -lvl 9 -x 3830 -y 680 -defaultsOSRD
+preplace netloc bram_interface_probe 1 6 1 2400 20n
+preplace netloc clk_wiz_0_clk_out1 1 0 6 30 960 430J 920 710 900 1080 630 1380 1050 N
+preplace netloc ilconcat_0_dout 1 7 4 NJ 10 NJ 10 N 10 4300
+preplace netloc ilconstant_0_dout 1 6 1 2390 -80n
+preplace netloc mmio_interface_0_prn_id 1 6 1 2460 510n
+preplace netloc mmio_interface_0_scaling 1 6 2 2410J 1070 2900
+preplace netloc mmio_interface_0_trigger 1 4 3 1400 940 N 940 2470
+preplace netloc proc_sys_reset_0_150_mb_reset 1 1 5 440 910 N 910 N 910 1390 920 1690
+preplace netloc proc_sys_reset_0_150_peripheral_aresetn 1 1 9 420J 930 N 930 N 930 N 930 1730 760 2520 1080 3200J 1110 3580 540 4020
+preplace netloc usp_rf_data_converter_0_clk_adc2 1 2 1 720 770n
+preplace netloc xpm_cdc_gen_0_dest_out 1 4 2 1410 620 1690
+preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 10 20 760 440J 650 N 650 990 620 1370 460 1740 260 2450 1090 3180 900 3630 550 4010
+preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 0 7 10 1370 NJ 1370 N 1370 N 1370 N 1370 1690 1400 2390
+preplace netloc adc2_clk_1 1 0 2 0J 740 390
+preplace netloc argmax_0_M00_AXIS 1 7 4 3210 890 3620J 880 N 880 4300
+preplace netloc axi_dma_0_M_AXI_S2MM 1 8 1 3640 940n
+preplace netloc axi_dma_1_M_AXIS_MM2S 1 9 1 N 660
+preplace netloc axi_dma_1_M_AXI_MM2S 1 8 2 3660 560 4000
+preplace netloc axi_dma_1_M_AXI_S2MM 1 8 2 3650 800 4000
+preplace netloc axi_ifft_config_M_AXIS_MM2S 1 6 2 2480J 1050 2890
+preplace netloc axi_ifft_config_M_AXI_MM2S 1 6 3 2490J 1060 3190J 910 3590
+preplace netloc axi_iq_config_M_AXIS_MM2S 1 6 2 2410J 430 2910
+preplace netloc axi_iq_config_M_AXI_MM2S 1 6 3 2390J 420 NJ 420 3600
+preplace netloc axi_prn_config_M_AXIS_MM2S 1 6 2 NJ 340 2930
+preplace netloc axi_prn_config_M_AXI_MM2S 1 6 3 NJ 320 NJ 320 3610
+preplace netloc axi_ram_0_M00_AXIS 1 7 1 2860 520n
+preplace netloc axi_rom_0_M00_AXIS 1 7 1 2820 480n
+preplace netloc axi_smc_1_M00_AXI 1 5 5 1790 1390 NJ 1390 NJ 1390 NJ 1390 4000
+preplace netloc axi_smc_M00_AXI 1 7 1 2880 660n
+preplace netloc axi_smc_M01_AXI 1 5 3 1780 1350 NJ 1350 2850
+preplace netloc axi_smc_M02_AXI 1 5 3 1790 1130 NJ 1130 2810
+preplace netloc axi_smc_M03_AXI 1 5 3 1770 1360 NJ 1360 2840
+preplace netloc axi_smc_M04_AXI 1 5 3 1760 1370 NJ 1370 2830
+preplace netloc axi_smc_M05_AXI 1 1 7 450 1380 NJ 1380 NJ 1380 NJ 1380 NJ 1380 NJ 1380 2820
+preplace netloc axi_smc_M06_AXI 1 7 2 2870 880 3570J
+preplace netloc axis_data_fifo_0_M_AXIS 1 6 1 2510 890n
+preplace netloc cic_compiler_1_M_AXIS_DATA 1 4 1 N 700
+preplace netloc cic_compiler_2_M_AXIS_DATA 1 4 1 1360 720n
+preplace netloc fft_convolve_0_M_OUTPUT_DATA 1 8 1 N 650
+preplace netloc iq_trigger_framer_0_M00_AXIS 1 5 1 1750J 780n
+preplace netloc sysref_in_1 1 0 2 NJ 720 400
+preplace netloc usp_rf_data_converter_0_m20_axis 1 2 2 710 690 N
+preplace netloc usp_rf_data_converter_0_m21_axis 1 2 2 710 830 N
+preplace netloc vin2_01_1 1 0 2 NJ 750 N
+preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_FPD 1 6 1 2500 690n
+preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM1_FPD 1 6 1 2530 710n
+levelinfo -pg 1 -20 210 580 900 1220 1550 2090 2670 3390 3830 4160 4320
+pagesize -pg 1 -db -bbox -sgen -140 -340 4430 1410
+"
+}
+{
+   "da_axi4_cnt":"38",
+   "da_clkrst_cnt":"15",
+   "da_rf_converter_usp_cnt":"1",
+   "da_zynq_ultra_ps_e_cnt":"1"
+}
