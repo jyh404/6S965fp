@@ -1,0 +1,10 @@
+
+
+OPTION psf_version = 2.1;
+
+BEGIN DRIVER adc_test_interface
+	OPTION supported_peripherals = (adc_test_interface);
+	OPTION copyfiles = all;
+	OPTION VERSION = 1.0;
+	OPTION NAME = adc_test_interface;
+END DRIVER
