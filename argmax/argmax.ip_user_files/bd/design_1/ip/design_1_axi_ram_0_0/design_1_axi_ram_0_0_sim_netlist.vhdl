@@ -2,10 +2,10 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
--- Date        : Tue Dec  9 23:00:43 2025
+-- Date        : Wed Dec 10 10:34:36 2025
 -- Host        : eecs-digital-44 running 64-bit Ubuntu 24.04.3 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/jhuang25/Documents/6.S965/6S965fp/argmax/argmax.gen/sources_1/bd/design_1/ip/design_1_axi_ram_0_0/design_1_axi_ram_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top design_1_axi_ram_0_0 -prefix
+--               design_1_axi_ram_0_0_ design_1_axi_ram_0_0_sim_netlist.vhdl
 -- Design      : design_1_axi_ram_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -35,8 +35,6 @@ entity design_1_axi_ram_0_0_xilinx_true_dual_port_read_first_2_clock_ram is
     \m00_axis_tdata[31]_11\ : in STD_LOGIC;
     s00_axis_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_axi_ram_0_0_xilinx_true_dual_port_read_first_2_clock_ram : entity is "xilinx_true_dual_port_read_first_2_clock_ram";
 end design_1_axi_ram_0_0_xilinx_true_dual_port_read_first_2_clock_ram;
 
 architecture STRUCTURE of design_1_axi_ram_0_0_xilinx_true_dual_port_read_first_2_clock_ram is
@@ -244,8 +242,6 @@ entity design_1_axi_ram_0_0_axi_ram is
     trigger : in STD_LOGIC;
     s00_axis_tvalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_axi_ram_0_0_axi_ram : entity is "axi_ram";
 end design_1_axi_ram_0_0_axi_ram;
 
 architecture STRUCTURE of design_1_axi_ram_0_0_axi_ram is

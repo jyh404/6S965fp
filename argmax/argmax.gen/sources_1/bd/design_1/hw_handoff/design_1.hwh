@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Dec  9 23:42:46 2025" VIVADOVERSION="2025.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Dec 10 12:44:01 2025" VIVADOVERSION="2025.1">
 
   <SYSTEMINFO ARCH="zynquplusRFSOC" BOARD="realdigital.org:rfsoc4x2:part0:1.0" DEVICE="xczu48dr" NAME="design_1" PACKAGE="ffvg1517" SPEEDGRADE="-2"/>
 
@@ -65,7 +65,7 @@
   </EXTERNALINTERFACES>
 
   <MODULES>
-    <MODULE COREREVISION="3" FULLNAME="/argmax_0" HWVERSION="1.0" INSTANCE="argmax_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="argmax" VLNV="user.org:user:argmax:1.0">
+    <MODULE COREREVISION="4" FULLNAME="/argmax_0" HWVERSION="1.0" INSTANCE="argmax_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="argmax" VLNV="user.org:user:argmax:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="C_M00_AXIS_START_COUNT" VALUE="32"/>
@@ -6501,7 +6501,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="13" FULLNAME="/axi_rom_0" HWVERSION="1.0" INSTANCE="axi_rom_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axi_rom" VLNV="user.org:user:axi_rom:1.0">
+    <MODULE COREREVISION="15" FULLNAME="/axi_rom_0" HWVERSION="1.0" INSTANCE="axi_rom_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axi_rom" VLNV="user.org:user:axi_rom:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="C_M00_AXIS_START_COUNT" VALUE="32"/>
@@ -10936,9 +10936,9 @@
         </PORT>
         <PORT DIR="O" NAME="trigger" SIGIS="undef" SIGNAME="mmio_interface_trigger">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_rom_0" PORT="trigger"/>
             <CONNECTION INSTANCE="axi_ram_0" PORT="trigger"/>
             <CONNECTION INSTANCE="xpm_cdc_gen_0" PORT="src_in"/>
+            <CONNECTION INSTANCE="axi_rom_0" PORT="trigger"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -11041,7 +11041,6 @@
             <CONNECTION INSTANCE="axi_prn_config" PORT="axi_resetn"/>
             <CONNECTION INSTANCE="axi_ram_0" PORT="m00_axis_aresetn"/>
             <CONNECTION INSTANCE="axi_ram_0" PORT="s00_axis_aresetn"/>
-            <CONNECTION INSTANCE="axi_rom_0" PORT="m00_axis_aresetn"/>
             <CONNECTION INSTANCE="mmio_interface" PORT="s00_axi_aresetn"/>
             <CONNECTION INSTANCE="axi_smc_1" PORT="aresetn"/>
             <CONNECTION INSTANCE="axi_smc" PORT="aresetn"/>
@@ -11054,6 +11053,7 @@
             <CONNECTION INSTANCE="axi_dma_1" PORT="axi_resetn"/>
             <CONNECTION INSTANCE="argmax_0" PORT="s00_axis_aresetn"/>
             <CONNECTION INSTANCE="argmax_0" PORT="m00_axis_aresetn"/>
+            <CONNECTION INSTANCE="axi_rom_0" PORT="m00_axis_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="peripheral_reset" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="rst"/>
@@ -15298,7 +15298,6 @@
             <CONNECTION INSTANCE="axi_prn_config" PORT="s_axi_lite_aclk"/>
             <CONNECTION INSTANCE="axi_ram_0" PORT="m00_axis_aclk"/>
             <CONNECTION INSTANCE="axi_ram_0" PORT="s00_axis_aclk"/>
-            <CONNECTION INSTANCE="axi_rom_0" PORT="m00_axis_aclk"/>
             <CONNECTION INSTANCE="xpm_cdc_gen_0" PORT="src_clk"/>
             <CONNECTION INSTANCE="mmio_interface" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="axi_smc_1" PORT="aclk"/>
@@ -15314,6 +15313,7 @@
             <CONNECTION INSTANCE="axi_dma_1" PORT="s_axi_lite_aclk"/>
             <CONNECTION INSTANCE="argmax_0" PORT="s00_axis_aclk"/>
             <CONNECTION INSTANCE="argmax_0" PORT="m00_axis_aclk"/>
+            <CONNECTION INSTANCE="axi_rom_0" PORT="m00_axis_aclk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="0" NAME="pl_ps_irq0" RIGHT="0" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT"/>

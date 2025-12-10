@@ -1318,7 +1318,7 @@
       },
       "axi_rom_0": {
         "vlnv": "user.org:user:axi_rom:1.0",
-        "ip_revision": "13",
+        "ip_revision": "15",
         "xci_name": "design_1_axi_rom_0_0",
         "xci_path": "ip/design_1_axi_rom_0_0/design_1_axi_rom_0_0.xci",
         "inst_hier_path": "axi_rom_0",
@@ -2044,7 +2044,7 @@
       },
       "argmax_0": {
         "vlnv": "user.org:user:argmax:1.0",
-        "ip_revision": "3",
+        "ip_revision": "4",
         "xci_name": "design_1_argmax_0_0",
         "xci_path": "ip/design_1_argmax_0_0/design_1_argmax_0_0.xci",
         "inst_hier_path": "argmax_0",
@@ -2372,9 +2372,9 @@
       "mmio_interface_0_trigger": {
         "ports": [
           "mmio_interface/trigger",
-          "axi_rom_0/trigger",
           "axi_ram_0/trigger",
-          "xpm_cdc_gen_0/src_in"
+          "xpm_cdc_gen_0/src_in",
+          "axi_rom_0/trigger"
         ]
       },
       "proc_sys_reset_0_150_mb_reset": {
@@ -2397,7 +2397,6 @@
           "axi_prn_config/axi_resetn",
           "axi_ram_0/m00_axis_aresetn",
           "axi_ram_0/s00_axis_aresetn",
-          "axi_rom_0/m00_axis_aresetn",
           "mmio_interface/s00_axi_aresetn",
           "axi_smc_1/aresetn",
           "axi_smc/aresetn",
@@ -2409,7 +2408,8 @@
           "fft_convolve_0/m_output_data_aresetn",
           "axi_dma_1/axi_resetn",
           "argmax_0/s00_axis_aresetn",
-          "argmax_0/m00_axis_aresetn"
+          "argmax_0/m00_axis_aresetn",
+          "axi_rom_0/m00_axis_aresetn"
         ]
       },
       "usp_rf_data_converter_0_clk_adc2": {
@@ -2443,7 +2443,6 @@
           "axi_prn_config/s_axi_lite_aclk",
           "axi_ram_0/m00_axis_aclk",
           "axi_ram_0/s00_axis_aclk",
-          "axi_rom_0/m00_axis_aclk",
           "xpm_cdc_gen_0/src_clk",
           "mmio_interface/s00_axi_aclk",
           "axi_smc_1/aclk",
@@ -2458,7 +2457,8 @@
           "axi_dma_1/m_axi_s2mm_aclk",
           "axi_dma_1/s_axi_lite_aclk",
           "argmax_0/s00_axis_aclk",
-          "argmax_0/m00_axis_aclk"
+          "argmax_0/m00_axis_aclk",
+          "axi_rom_0/m00_axis_aclk"
         ]
       },
       "zynq_ultra_ps_e_0_pl_resetn0": {

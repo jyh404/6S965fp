@@ -2,10 +2,10 @@
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-// Date        : Tue Dec  9 23:00:42 2025
+// Date        : Wed Dec 10 10:34:36 2025
 // Host        : eecs-digital-44 running 64-bit Ubuntu 24.04.3 LTS
-// Command     : write_verilog -force -mode funcsim
-//               /home/jhuang25/Documents/6.S965/6S965fp/argmax/argmax.gen/sources_1/bd/design_1/ip/design_1_axi_ram_0_0/design_1_axi_ram_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top design_1_axi_ram_0_0 -prefix
+//               design_1_axi_ram_0_0_ design_1_axi_ram_0_0_sim_netlist.v
 // Design      : design_1_axi_ram_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -13,72 +13,6 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "design_1_axi_ram_0_0,axi_ram,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axi_ram,Vivado 2025.1" *) 
-(* NotValidForBitStream *)
-module design_1_axi_ram_0_0
-   (trigger,
-    s00_axis_aclk,
-    s00_axis_aresetn,
-    s00_axis_tready,
-    s00_axis_tdata,
-    s00_axis_tstrb,
-    s00_axis_tlast,
-    s00_axis_tvalid,
-    m00_axis_aclk,
-    m00_axis_aresetn,
-    m00_axis_tvalid,
-    m00_axis_tdata,
-    m00_axis_tstrb,
-    m00_axis_tlast,
-    m00_axis_tready);
-  input trigger;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 S00_AXIS_CLK CLK" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXIS_CLK, ASSOCIATED_BUSIF S00_AXIS, ASSOCIATED_RESET s00_axis_aresetn, FREQ_HZ 149999985, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_zynq_ultra_ps_e_0_0_pl_clk0, INSERT_VIP 0" *) input s00_axis_aclk;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 S00_AXIS_RST RST" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXIS_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input s00_axis_aresetn;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S00_AXIS TREADY" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXIS, WIZ_DATA_WIDTH 32, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 149999985, PHASE 0.0, CLK_DOMAIN design_1_zynq_ultra_ps_e_0_0_pl_clk0, LAYERED_METADATA undef, INSERT_VIP 0" *) output s00_axis_tready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S00_AXIS TDATA" *) input [31:0]s00_axis_tdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S00_AXIS TSTRB" *) input [3:0]s00_axis_tstrb;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S00_AXIS TLAST" *) input s00_axis_tlast;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S00_AXIS TVALID" *) input s00_axis_tvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 M00_AXIS_CLK CLK" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M00_AXIS_CLK, ASSOCIATED_BUSIF M00_AXIS, ASSOCIATED_RESET m00_axis_aresetn, FREQ_HZ 149999985, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_zynq_ultra_ps_e_0_0_pl_clk0, INSERT_VIP 0" *) input m00_axis_aclk;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 M00_AXIS_RST RST" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M00_AXIS_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input m00_axis_aresetn;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M00_AXIS TVALID" *) (* X_INTERFACE_MODE = "master" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M00_AXIS, WIZ_DATA_WIDTH 32, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 149999985, PHASE 0.0, CLK_DOMAIN design_1_zynq_ultra_ps_e_0_0_pl_clk0, LAYERED_METADATA undef, INSERT_VIP 0" *) output m00_axis_tvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M00_AXIS TDATA" *) output [31:0]m00_axis_tdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M00_AXIS TSTRB" *) output [3:0]m00_axis_tstrb;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M00_AXIS TLAST" *) output m00_axis_tlast;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M00_AXIS TREADY" *) input m00_axis_tready;
-
-  wire \<const1> ;
-  wire [31:0]m00_axis_tdata;
-  wire m00_axis_tlast;
-  wire m00_axis_tready;
-  wire m00_axis_tvalid;
-  wire s00_axis_aclk;
-  wire s00_axis_aresetn;
-  wire [31:0]s00_axis_tdata;
-  wire s00_axis_tready;
-  wire s00_axis_tvalid;
-  wire trigger;
-
-  assign m00_axis_tstrb[3] = \<const1> ;
-  assign m00_axis_tstrb[2] = \<const1> ;
-  assign m00_axis_tstrb[1] = \<const1> ;
-  assign m00_axis_tstrb[0] = \<const1> ;
-  VCC VCC
-       (.P(\<const1> ));
-  design_1_axi_ram_0_0_axi_ram inst
-       (.m00_axis_tdata(m00_axis_tdata),
-        .m00_axis_tlast(m00_axis_tlast),
-        .m00_axis_tready(m00_axis_tready),
-        .m00_axis_tvalid_reg_reg_0(m00_axis_tvalid),
-        .s00_axis_aclk(s00_axis_aclk),
-        .s00_axis_aresetn(s00_axis_aresetn),
-        .s00_axis_tdata(s00_axis_tdata),
-        .s00_axis_tready_reg_reg_0(s00_axis_tready),
-        .s00_axis_tvalid(s00_axis_tvalid),
-        .trigger(trigger));
-endmodule
-
-(* ORIG_REF_NAME = "axi_ram" *) 
 module design_1_axi_ram_0_0_axi_ram
    (m00_axis_tdata,
     m00_axis_tvalid_reg_reg_0,
@@ -853,7 +787,71 @@ module design_1_axi_ram_0_0_axi_ram
         .R(s00_axis_tready_reg_i_1_n_0));
 endmodule
 
-(* ORIG_REF_NAME = "xilinx_true_dual_port_read_first_2_clock_ram" *) 
+(* CHECK_LICENSE_TYPE = "design_1_axi_ram_0_0,axi_ram,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axi_ram,Vivado 2025.1" *) 
+(* NotValidForBitStream *)
+module design_1_axi_ram_0_0
+   (trigger,
+    s00_axis_aclk,
+    s00_axis_aresetn,
+    s00_axis_tready,
+    s00_axis_tdata,
+    s00_axis_tstrb,
+    s00_axis_tlast,
+    s00_axis_tvalid,
+    m00_axis_aclk,
+    m00_axis_aresetn,
+    m00_axis_tvalid,
+    m00_axis_tdata,
+    m00_axis_tstrb,
+    m00_axis_tlast,
+    m00_axis_tready);
+  input trigger;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 S00_AXIS_CLK CLK" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXIS_CLK, ASSOCIATED_BUSIF S00_AXIS, ASSOCIATED_RESET s00_axis_aresetn, FREQ_HZ 149999985, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_zynq_ultra_ps_e_0_0_pl_clk0, INSERT_VIP 0" *) input s00_axis_aclk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 S00_AXIS_RST RST" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXIS_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input s00_axis_aresetn;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S00_AXIS TREADY" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXIS, WIZ_DATA_WIDTH 32, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 149999985, PHASE 0.0, CLK_DOMAIN design_1_zynq_ultra_ps_e_0_0_pl_clk0, LAYERED_METADATA undef, INSERT_VIP 0" *) output s00_axis_tready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S00_AXIS TDATA" *) input [31:0]s00_axis_tdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S00_AXIS TSTRB" *) input [3:0]s00_axis_tstrb;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S00_AXIS TLAST" *) input s00_axis_tlast;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S00_AXIS TVALID" *) input s00_axis_tvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 M00_AXIS_CLK CLK" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M00_AXIS_CLK, ASSOCIATED_BUSIF M00_AXIS, ASSOCIATED_RESET m00_axis_aresetn, FREQ_HZ 149999985, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_zynq_ultra_ps_e_0_0_pl_clk0, INSERT_VIP 0" *) input m00_axis_aclk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 M00_AXIS_RST RST" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M00_AXIS_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input m00_axis_aresetn;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M00_AXIS TVALID" *) (* X_INTERFACE_MODE = "master" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M00_AXIS, WIZ_DATA_WIDTH 32, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 149999985, PHASE 0.0, CLK_DOMAIN design_1_zynq_ultra_ps_e_0_0_pl_clk0, LAYERED_METADATA undef, INSERT_VIP 0" *) output m00_axis_tvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M00_AXIS TDATA" *) output [31:0]m00_axis_tdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M00_AXIS TSTRB" *) output [3:0]m00_axis_tstrb;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M00_AXIS TLAST" *) output m00_axis_tlast;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M00_AXIS TREADY" *) input m00_axis_tready;
+
+  wire \<const1> ;
+  wire [31:0]m00_axis_tdata;
+  wire m00_axis_tlast;
+  wire m00_axis_tready;
+  wire m00_axis_tvalid;
+  wire s00_axis_aclk;
+  wire s00_axis_aresetn;
+  wire [31:0]s00_axis_tdata;
+  wire s00_axis_tready;
+  wire s00_axis_tvalid;
+  wire trigger;
+
+  assign m00_axis_tstrb[3] = \<const1> ;
+  assign m00_axis_tstrb[2] = \<const1> ;
+  assign m00_axis_tstrb[1] = \<const1> ;
+  assign m00_axis_tstrb[0] = \<const1> ;
+  VCC VCC
+       (.P(\<const1> ));
+  design_1_axi_ram_0_0_axi_ram inst
+       (.m00_axis_tdata(m00_axis_tdata),
+        .m00_axis_tlast(m00_axis_tlast),
+        .m00_axis_tready(m00_axis_tready),
+        .m00_axis_tvalid_reg_reg_0(m00_axis_tvalid),
+        .s00_axis_aclk(s00_axis_aclk),
+        .s00_axis_aresetn(s00_axis_aresetn),
+        .s00_axis_tdata(s00_axis_tdata),
+        .s00_axis_tready_reg_reg_0(s00_axis_tready),
+        .s00_axis_tvalid(s00_axis_tvalid),
+        .trigger(trigger));
+endmodule
+
 module design_1_axi_ram_0_0_xilinx_true_dual_port_read_first_2_clock_ram
    (m00_axis_tdata,
     s00_axis_aclk,

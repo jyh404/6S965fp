@@ -2,11 +2,11 @@
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-// Date        : Tue Dec  9 23:00:59 2025
+// Date        : Wed Dec 10 10:36:54 2025
 // Host        : eecs-digital-44 running 64-bit Ubuntu 24.04.3 LTS
 // Command     : write_verilog -force -mode funcsim -rename_top design_1_axi_prn_config_1 -prefix
-//               design_1_axi_prn_config_1_ design_1_axi_dma_1_0_sim_netlist.v
-// Design      : design_1_axi_dma_1_0
+//               design_1_axi_prn_config_1_ design_1_axi_prn_config_0_sim_netlist.v
+// Design      : design_1_axi_prn_config_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
 // Device      : xczu48dr-ffvg1517-2-e
@@ -14538,7 +14538,7 @@ module design_1_axi_prn_config_1_axi_dma_sofeof_gen
         .O(axi_dma_tstvec[1]));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "design_1_axi_dma_1_0,axi_dma,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "axi_dma,Vivado 2025.1" *) 
+(* CHECK_LICENSE_TYPE = "design_1_axi_prn_config_0,axi_dma,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "axi_dma,Vivado 2025.1" *) 
 (* NotValidForBitStream *)
 module design_1_axi_prn_config_1
    (s_axi_lite_aclk,
