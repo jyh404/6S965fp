@@ -2,10 +2,10 @@
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-// Date        : Tue Dec  9 10:49:41 2025
-// Host        : eecs-digital-35 running 64-bit Ubuntu 24.04.3 LTS
-// Command     : write_verilog -force -mode funcsim -rename_top design_1_rst_ps8_0_99M_6 -prefix
-//               design_1_rst_ps8_0_99M_6_ design_1_rst_ps8_0_99M_6_sim_netlist.v
+// Date        : Tue Dec  9 14:06:46 2025
+// Host        : eecs-digital-44 running 64-bit Ubuntu 24.04.3 LTS
+// Command     : write_verilog -force -mode funcsim
+//               /home/aloy_ng/proj/6S965fp/fft_convolve/fft_convolve.gen/sources_1/bd/design_1/ip/design_1_rst_ps8_0_99M_6/design_1_rst_ps8_0_99M_6_sim_netlist.v
 // Design      : design_1_rst_ps8_0_99M_6
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -70,6 +70,7 @@ module design_1_rst_ps8_0_99M_6
         .slowest_sync_clk(slowest_sync_clk));
 endmodule
 
+(* ORIG_REF_NAME = "lpf" *) 
 module design_1_rst_ps8_0_99M_6_lpf
    (lpf_int,
     slowest_sync_clk,
@@ -260,6 +261,7 @@ endmodule
 (* C_AUX_RESET_HIGH = "1'b0" *) (* C_AUX_RST_WIDTH = "4" *) (* C_EXT_RESET_HIGH = "1'b0" *) 
 (* C_EXT_RST_WIDTH = "4" *) (* C_FAMILY = "zynquplus" *) (* C_NUM_BUS_RST = "1" *) 
 (* C_NUM_INTERCONNECT_ARESETN = "1" *) (* C_NUM_PERP_ARESETN = "1" *) (* C_NUM_PERP_RST = "1" *) 
+(* ORIG_REF_NAME = "proc_sys_reset" *) 
 module design_1_rst_ps8_0_99M_6_proc_sys_reset
    (slowest_sync_clk,
     ext_reset_in,
@@ -376,6 +378,7 @@ module design_1_rst_ps8_0_99M_6_proc_sys_reset
         .slowest_sync_clk(slowest_sync_clk));
 endmodule
 
+(* ORIG_REF_NAME = "sequence_psr" *) 
 module design_1_rst_ps8_0_99M_6_sequence_psr
    (MB_out,
     Bsr_out,
@@ -616,6 +619,7 @@ module design_1_rst_ps8_0_99M_6_sequence_psr
         .R(lpf_int));
 endmodule
 
+(* ORIG_REF_NAME = "upcnt_n" *) 
 module design_1_rst_ps8_0_99M_6_upcnt_n
    (Q,
     seq_clr,
@@ -737,9 +741,9 @@ module design_1_rst_ps8_0_99M_6_upcnt_n
         .R(clear));
 endmodule
 
-(* DEST_SYNC_FF = "4" *) (* INIT_SYNC_FF = "0" *) (* SIM_ASSERT_CHK = "0" *) 
-(* SRC_INPUT_REG = "0" *) (* VERSION = "0" *) (* XPM_MODULE = "TRUE" *) 
-(* keep_hierarchy = "true" *) (* xpm_cdc = "SINGLE" *) 
+(* DEST_SYNC_FF = "4" *) (* INIT_SYNC_FF = "0" *) (* ORIG_REF_NAME = "xpm_cdc_single" *) 
+(* SIM_ASSERT_CHK = "0" *) (* SRC_INPUT_REG = "0" *) (* VERSION = "0" *) 
+(* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "true" *) (* xpm_cdc = "SINGLE" *) 
 module design_1_rst_ps8_0_99M_6_xpm_cdc_single
    (src_clk,
     src_in,

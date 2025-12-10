@@ -7,7 +7,7 @@
 <Project Product="Vivado" Version="7" Minor="70" Path="/home/aloy_ng/proj/6S965fp/auto_trigger/auto_trigger.tmp/axi_continuous_ram_v1_0_project/axi_continuous_ram_v1_0_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="9dce1dab7e724f9db7840bfb14a45bb1"/>
+    <Option Name="Id" Val="51b0ca9675324201a584bd900187e99c"/>
     <Option Name="Part" Val="xczu48dr-ffvg1517-2-e"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -47,6 +47,7 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../ip_repo/axi_continuous_rom_1_0"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../../../ip_repo/axi_continuous_ram_1_0"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../../../ip_repo/argmax_1_0"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../../../ip_repo"/>

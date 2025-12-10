@@ -2,10 +2,10 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
--- Date        : Tue Dec  9 10:49:42 2025
--- Host        : eecs-digital-35 running 64-bit Ubuntu 24.04.3 LTS
--- Command     : write_vhdl -force -mode funcsim -rename_top design_1_zynq_ultra_ps_e_0_2 -prefix
---               design_1_zynq_ultra_ps_e_0_2_ design_1_zynq_ultra_ps_e_0_2_sim_netlist.vhdl
+-- Date        : Tue Dec  9 14:06:50 2025
+-- Host        : eecs-digital-44 running 64-bit Ubuntu 24.04.3 LTS
+-- Command     : write_vhdl -force -mode funcsim
+--               /home/aloy_ng/proj/6S965fp/fft_convolve/fft_convolve.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_2/design_1_zynq_ultra_ps_e_0_2_sim_netlist.vhdl
 -- Design      : design_1_zynq_ultra_ps_e_0_2
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -1585,6 +1585,8 @@ entity design_1_zynq_ultra_ps_e_0_2_zynq_ultra_ps_e_v3_5_7_zynq_ultra_ps_e is
   attribute C_USE_DIFF_RW_CLK_GP6 of design_1_zynq_ultra_ps_e_0_2_zynq_ultra_ps_e_v3_5_7_zynq_ultra_ps_e : entity is 0;
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of design_1_zynq_ultra_ps_e_0_2_zynq_ultra_ps_e_v3_5_7_zynq_ultra_ps_e : entity is "design_1_zynq_ultra_ps_e_0_2.hwdef";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_zynq_ultra_ps_e_0_2_zynq_ultra_ps_e_v3_5_7_zynq_ultra_ps_e : entity is "zynq_ultra_ps_e_v3_5_7_zynq_ultra_ps_e";
   attribute PSS_IO : string;
   attribute PSS_IO of design_1_zynq_ultra_ps_e_0_2_zynq_ultra_ps_e_v3_5_7_zynq_ultra_ps_e : entity is "Signal Name, DiffPair Type, DiffPair Signal,Direction, Site Type, IO Standard, Drive (mA), Slew Rate, Pull Type, IBIS Model, ODT, OUTPUT_IMPEDANCE " & LF &
  "SPI0_SCLK_OUT, , , INOUT, PS_MIO0_500, LVCMOS33, 12, FAST, PULLUP, PS_MIO_LVCMOS33_F_12,,  " & LF &

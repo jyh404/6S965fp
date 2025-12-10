@@ -1,0 +1,10 @@
+
+
+OPTION psf_version = 2.1;
+
+BEGIN DRIVER scaling_interface
+	OPTION supported_peripherals = (scaling_interface);
+	OPTION copyfiles = all;
+	OPTION VERSION = 1.0;
+	OPTION NAME = scaling_interface;
+END DRIVER

@@ -2,7 +2,7 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-//Date        : Tue Dec  9 10:03:18 2025
+//Date        : Tue Dec  9 11:11:03 2025
 //Host        : eecs-digital-35 running 64-bit Ubuntu 24.04.3 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -10,9 +10,10 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=11,numReposBlks=11,numNonXlnxBlks=1,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=68,da_clkrst_cnt=14,da_zynq_ultra_ps_e_cnt=4,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=12,numReposBlks=12,numNonXlnxBlks=2,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=69,da_clkrst_cnt=21,da_zynq_ultra_ps_e_cnt=4,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
-   ();
+   (led);
+  output [3:0]led;
 
   wire [48:0]axi_smc_1_M00_AXI_ARADDR;
   wire [1:0]axi_smc_1_M00_AXI_ARBURST;
@@ -143,6 +144,25 @@ module design_1
   wire [31:0]axi_smc_M05_AXI_WDATA;
   wire axi_smc_M05_AXI_WREADY;
   wire axi_smc_M05_AXI_WVALID;
+  wire [3:0]axi_smc_M06_AXI_ARADDR;
+  wire [2:0]axi_smc_M06_AXI_ARPROT;
+  wire axi_smc_M06_AXI_ARREADY;
+  wire axi_smc_M06_AXI_ARVALID;
+  wire [3:0]axi_smc_M06_AXI_AWADDR;
+  wire [2:0]axi_smc_M06_AXI_AWPROT;
+  wire axi_smc_M06_AXI_AWREADY;
+  wire axi_smc_M06_AXI_AWVALID;
+  wire axi_smc_M06_AXI_BREADY;
+  wire [1:0]axi_smc_M06_AXI_BRESP;
+  wire axi_smc_M06_AXI_BVALID;
+  wire [31:0]axi_smc_M06_AXI_RDATA;
+  wire axi_smc_M06_AXI_RREADY;
+  wire [1:0]axi_smc_M06_AXI_RRESP;
+  wire axi_smc_M06_AXI_RVALID;
+  wire [31:0]axi_smc_M06_AXI_WDATA;
+  wire axi_smc_M06_AXI_WREADY;
+  wire [3:0]axi_smc_M06_AXI_WSTRB;
+  wire axi_smc_M06_AXI_WVALID;
   wire [7:0]dma_ifft_config_M_AXIS_MM2S_TDATA;
   wire dma_ifft_config_M_AXIS_MM2S_TLAST;
   wire dma_ifft_config_M_AXIS_MM2S_TREADY;
@@ -248,6 +268,7 @@ module design_1
   wire fft_convolve_0_M_OUTPUT_DATA_TLAST;
   wire fft_convolve_0_M_OUTPUT_DATA_TREADY;
   wire fft_convolve_0_M_OUTPUT_DATA_TVALID;
+  wire [3:0]led;
   wire [0:0]rst_ps8_0_99M_peripheral_aresetn;
   wire [39:0]zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_ARADDR;
   wire [1:0]zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_ARBURST;
@@ -427,6 +448,25 @@ module design_1
         .M05_AXI_wdata(axi_smc_M05_AXI_WDATA),
         .M05_AXI_wready(axi_smc_M05_AXI_WREADY),
         .M05_AXI_wvalid(axi_smc_M05_AXI_WVALID),
+        .M06_AXI_araddr(axi_smc_M06_AXI_ARADDR),
+        .M06_AXI_arprot(axi_smc_M06_AXI_ARPROT),
+        .M06_AXI_arready(axi_smc_M06_AXI_ARREADY),
+        .M06_AXI_arvalid(axi_smc_M06_AXI_ARVALID),
+        .M06_AXI_awaddr(axi_smc_M06_AXI_AWADDR),
+        .M06_AXI_awprot(axi_smc_M06_AXI_AWPROT),
+        .M06_AXI_awready(axi_smc_M06_AXI_AWREADY),
+        .M06_AXI_awvalid(axi_smc_M06_AXI_AWVALID),
+        .M06_AXI_bready(axi_smc_M06_AXI_BREADY),
+        .M06_AXI_bresp(axi_smc_M06_AXI_BRESP),
+        .M06_AXI_bvalid(axi_smc_M06_AXI_BVALID),
+        .M06_AXI_rdata(axi_smc_M06_AXI_RDATA),
+        .M06_AXI_rready(axi_smc_M06_AXI_RREADY),
+        .M06_AXI_rresp(axi_smc_M06_AXI_RRESP),
+        .M06_AXI_rvalid(axi_smc_M06_AXI_RVALID),
+        .M06_AXI_wdata(axi_smc_M06_AXI_WDATA),
+        .M06_AXI_wready(axi_smc_M06_AXI_WREADY),
+        .M06_AXI_wstrb(axi_smc_M06_AXI_WSTRB),
+        .M06_AXI_wvalid(axi_smc_M06_AXI_WVALID),
         .S00_AXI_araddr(zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_ARADDR),
         .S00_AXI_arburst(zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_ARBURST),
         .S00_AXI_arcache(zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_ARCACHE),
@@ -862,7 +902,7 @@ module design_1
         .s_axi_lite_wdata(axi_smc_M05_AXI_WDATA),
         .s_axi_lite_wready(axi_smc_M05_AXI_WREADY),
         .s_axi_lite_wvalid(axi_smc_M05_AXI_WVALID));
-  design_1_fft_convolve_0_2 fft_convolve_0
+  design_1_fft_convolve_0_3 fft_convolve_0
        (.m_output_data_aclk(zynq_ultra_ps_e_0_pl_clk0),
         .m_output_data_aresetn(rst_ps8_0_99M_peripheral_aresetn),
         .m_output_data_tdata(fft_convolve_0_M_OUTPUT_DATA_TDATA),
@@ -903,7 +943,8 @@ module design_1
         .s_prn_data_tlast(dma_prn_data_M_AXIS_MM2S_TLAST),
         .s_prn_data_tready(dma_prn_data_M_AXIS_MM2S_TREADY),
         .s_prn_data_tstrb({1'b1,1'b1,1'b1,1'b1}),
-        .s_prn_data_tvalid(dma_prn_data_M_AXIS_MM2S_TVALID));
+        .s_prn_data_tvalid(dma_prn_data_M_AXIS_MM2S_TVALID),
+        .scaling(led));
   design_1_rst_ps8_0_99M_6 rst_ps8_0_99M
        (.aux_reset_in(1'b1),
         .dcm_locked(1'b1),
@@ -911,6 +952,29 @@ module design_1
         .mb_debug_sys_rst(1'b0),
         .peripheral_aresetn(rst_ps8_0_99M_peripheral_aresetn),
         .slowest_sync_clk(zynq_ultra_ps_e_0_pl_clk0));
+  design_1_scaling_interface_0_0 scaling_interface_0
+       (.s00_axi_aclk(zynq_ultra_ps_e_0_pl_clk0),
+        .s00_axi_araddr(axi_smc_M06_AXI_ARADDR),
+        .s00_axi_aresetn(rst_ps8_0_99M_peripheral_aresetn),
+        .s00_axi_arprot(axi_smc_M06_AXI_ARPROT),
+        .s00_axi_arready(axi_smc_M06_AXI_ARREADY),
+        .s00_axi_arvalid(axi_smc_M06_AXI_ARVALID),
+        .s00_axi_awaddr(axi_smc_M06_AXI_AWADDR),
+        .s00_axi_awprot(axi_smc_M06_AXI_AWPROT),
+        .s00_axi_awready(axi_smc_M06_AXI_AWREADY),
+        .s00_axi_awvalid(axi_smc_M06_AXI_AWVALID),
+        .s00_axi_bready(axi_smc_M06_AXI_BREADY),
+        .s00_axi_bresp(axi_smc_M06_AXI_BRESP),
+        .s00_axi_bvalid(axi_smc_M06_AXI_BVALID),
+        .s00_axi_rdata(axi_smc_M06_AXI_RDATA),
+        .s00_axi_rready(axi_smc_M06_AXI_RREADY),
+        .s00_axi_rresp(axi_smc_M06_AXI_RRESP),
+        .s00_axi_rvalid(axi_smc_M06_AXI_RVALID),
+        .s00_axi_wdata(axi_smc_M06_AXI_WDATA),
+        .s00_axi_wready(axi_smc_M06_AXI_WREADY),
+        .s00_axi_wstrb(axi_smc_M06_AXI_WSTRB),
+        .s00_axi_wvalid(axi_smc_M06_AXI_WVALID),
+        .scaling(led));
   design_1_zynq_ultra_ps_e_0_2 zynq_ultra_ps_e_0
        (.emio_gpio_i({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .maxigp0_araddr(zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_ARADDR),

@@ -1,11 +1,8 @@
-verilog xil_defaultlib -i "../../../../../../../../../../tools/Xilinx/2025.1/data/rsb/busdef" --include "/tools/Xilinx/2025.1/Vivado/data/xilinx_vip/include" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/7711/hdl" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/a8e4/hdl/verilog" \
+verilog xil_defaultlib -i "../../../../../../../../../tools/Xilinx/2025.1/data/rsb/busdef" --include "/tools/Xilinx/2025.1/Vivado/data/xilinx_vip/include" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/7711/hdl" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/a8e4/hdl/verilog" \
 "../../../bd/design_1/ip/design_1_zynq_ultra_ps_e_0_2/sim/design_1_zynq_ultra_ps_e_0_2_vip_wrapper.v" \
-"../../../bd/design_1/ipshared/50f0/hdl/fft_convolve.v" \
-"../../../bd/design_1/ip/design_1_fft_convolve_0_2/sim/design_1_fft_convolve_0_2.v" \
-"../../../bd/design_1/ip/design_1_axi_smc_7/bd_0/sim/bd_6d82.v" \
 "../../../bd/design_1/ip/design_1_axi_smc_7/bd_0/ip/ip_0/sim/bd_6d82_one_0.v" \
 
-sv xil_defaultlib -i "../../../../../../../../../../tools/Xilinx/2025.1/data/rsb/busdef" --include "/tools/Xilinx/2025.1/Vivado/data/xilinx_vip/include" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/7711/hdl" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/a8e4/hdl/verilog" \
+sv xil_defaultlib -i "../../../../../../../../../tools/Xilinx/2025.1/data/rsb/busdef" --include "/tools/Xilinx/2025.1/Vivado/data/xilinx_vip/include" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/7711/hdl" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/a8e4/hdl/verilog" \
 "../../../bd/design_1/ip/design_1_axi_smc_7/bd_0/ip/ip_2/sim/bd_6d82_arinsw_0.sv" \
 "../../../bd/design_1/ip/design_1_axi_smc_7/bd_0/ip/ip_3/sim/bd_6d82_rinsw_0.sv" \
 "../../../bd/design_1/ip/design_1_axi_smc_7/bd_0/ip/ip_4/sim/bd_6d82_awinsw_0.sv" \
@@ -81,13 +78,24 @@ sv xil_defaultlib -i "../../../../../../../../../../tools/Xilinx/2025.1/data/rsb
 "../../../bd/design_1/ip/design_1_axi_smc_7/bd_0/ip/ip_74/sim/bd_6d82_m05wn_0.sv" \
 "../../../bd/design_1/ip/design_1_axi_smc_7/bd_0/ip/ip_75/sim/bd_6d82_m05bn_0.sv" \
 "../../../bd/design_1/ip/design_1_axi_smc_7/bd_0/ip/ip_76/sim/bd_6d82_m05e_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_7/bd_0/ip/ip_77/sim/bd_6d82_m06s2a_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_7/bd_0/ip/ip_78/sim/bd_6d82_m06arn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_7/bd_0/ip/ip_79/sim/bd_6d82_m06rn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_7/bd_0/ip/ip_80/sim/bd_6d82_m06awn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_7/bd_0/ip/ip_81/sim/bd_6d82_m06wn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_7/bd_0/ip/ip_82/sim/bd_6d82_m06bn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_7/bd_0/ip/ip_83/sim/bd_6d82_m06e_0.sv" \
+
+verilog xil_defaultlib -i "../../../../../../../../../tools/Xilinx/2025.1/data/rsb/busdef" --include "/tools/Xilinx/2025.1/Vivado/data/xilinx_vip/include" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/7711/hdl" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/a8e4/hdl/verilog" \
+"../../../bd/design_1/ip/design_1_axi_smc_7/bd_0/sim/bd_6d82.v" \
+
+sv xil_defaultlib -i "../../../../../../../../../tools/Xilinx/2025.1/data/rsb/busdef" --include "/tools/Xilinx/2025.1/Vivado/data/xilinx_vip/include" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/7711/hdl" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/a8e4/hdl/verilog" \
 "../../../bd/design_1/ip/design_1_axi_smc_7/sim/design_1_axi_smc_7.sv" \
 
-verilog xil_defaultlib -i "../../../../../../../../../../tools/Xilinx/2025.1/data/rsb/busdef" --include "/tools/Xilinx/2025.1/Vivado/data/xilinx_vip/include" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/7711/hdl" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/a8e4/hdl/verilog" \
-"../../../bd/design_1/ip/design_1_axi_smc_1_7/bd_0/sim/bd_6a39.v" \
+verilog xil_defaultlib -i "../../../../../../../../../tools/Xilinx/2025.1/data/rsb/busdef" --include "/tools/Xilinx/2025.1/Vivado/data/xilinx_vip/include" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/7711/hdl" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/a8e4/hdl/verilog" \
 "../../../bd/design_1/ip/design_1_axi_smc_1_7/bd_0/ip/ip_0/sim/bd_6a39_one_0.v" \
 
-sv xil_defaultlib -i "../../../../../../../../../../tools/Xilinx/2025.1/data/rsb/busdef" --include "/tools/Xilinx/2025.1/Vivado/data/xilinx_vip/include" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/7711/hdl" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/a8e4/hdl/verilog" \
+sv xil_defaultlib -i "../../../../../../../../../tools/Xilinx/2025.1/data/rsb/busdef" --include "/tools/Xilinx/2025.1/Vivado/data/xilinx_vip/include" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/7711/hdl" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/a8e4/hdl/verilog" \
 "../../../bd/design_1/ip/design_1_axi_smc_1_7/bd_0/ip/ip_2/sim/bd_6a39_arsw_0.sv" \
 "../../../bd/design_1/ip/design_1_axi_smc_1_7/bd_0/ip/ip_3/sim/bd_6a39_rsw_0.sv" \
 "../../../bd/design_1/ip/design_1_axi_smc_1_7/bd_0/ip/ip_4/sim/bd_6a39_awsw_0.sv" \
@@ -137,9 +145,19 @@ sv xil_defaultlib -i "../../../../../../../../../../tools/Xilinx/2025.1/data/rsb
 "../../../bd/design_1/ip/design_1_axi_smc_1_7/bd_0/ip/ip_48/sim/bd_6a39_m00wn_0.sv" \
 "../../../bd/design_1/ip/design_1_axi_smc_1_7/bd_0/ip/ip_49/sim/bd_6a39_m00bn_0.sv" \
 "../../../bd/design_1/ip/design_1_axi_smc_1_7/bd_0/ip/ip_50/sim/bd_6a39_m00e_0.sv" \
+
+verilog xil_defaultlib -i "../../../../../../../../../tools/Xilinx/2025.1/data/rsb/busdef" --include "/tools/Xilinx/2025.1/Vivado/data/xilinx_vip/include" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/7711/hdl" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/a8e4/hdl/verilog" \
+"../../../bd/design_1/ip/design_1_axi_smc_1_7/bd_0/sim/bd_6a39.v" \
+
+sv xil_defaultlib -i "../../../../../../../../../tools/Xilinx/2025.1/data/rsb/busdef" --include "/tools/Xilinx/2025.1/Vivado/data/xilinx_vip/include" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/7711/hdl" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/a8e4/hdl/verilog" \
 "../../../bd/design_1/ip/design_1_axi_smc_1_7/sim/design_1_axi_smc_1_7.sv" \
 
-verilog xil_defaultlib -i "../../../../../../../../../../tools/Xilinx/2025.1/data/rsb/busdef" --include "/tools/Xilinx/2025.1/Vivado/data/xilinx_vip/include" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/7711/hdl" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/a8e4/hdl/verilog" \
+verilog xil_defaultlib -i "../../../../../../../../../tools/Xilinx/2025.1/data/rsb/busdef" --include "/tools/Xilinx/2025.1/Vivado/data/xilinx_vip/include" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/7711/hdl" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../fft_convolve.gen/sources_1/bd/design_1/ipshared/a8e4/hdl/verilog" \
+"../../../bd/design_1/ipshared/bd04/hdl/fft_convolve.v" \
+"../../../bd/design_1/ip/design_1_fft_convolve_0_3/sim/design_1_fft_convolve_0_3.v" \
+"../../../bd/design_1/ipshared/789d/hdl/scaling_interface_slave_lite_v1_0_S00_AXI.v" \
+"../../../bd/design_1/ipshared/789d/hdl/scaling_interface.v" \
+"../../../bd/design_1/ip/design_1_scaling_interface_0_0/sim/design_1_scaling_interface_0_0.v" \
 "../../../bd/design_1/sim/design_1.v" \
 
 verilog xil_defaultlib "glbl.v"

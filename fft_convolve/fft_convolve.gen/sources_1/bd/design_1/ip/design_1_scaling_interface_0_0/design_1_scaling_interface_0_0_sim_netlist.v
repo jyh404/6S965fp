@@ -2,10 +2,10 @@
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-// Date        : Tue Dec  9 10:49:40 2025
-// Host        : eecs-digital-35 running 64-bit Ubuntu 24.04.3 LTS
-// Command     : write_verilog -force -mode funcsim -rename_top design_1_scaling_interface_0_0 -prefix
-//               design_1_scaling_interface_0_0_ design_1_scaling_interface_0_0_sim_netlist.v
+// Date        : Tue Dec  9 14:06:41 2025
+// Host        : eecs-digital-44 running 64-bit Ubuntu 24.04.3 LTS
+// Command     : write_verilog -force -mode funcsim
+//               /home/aloy_ng/proj/6S965fp/fft_convolve/fft_convolve.gen/sources_1/bd/design_1/ip/design_1_scaling_interface_0_0/design_1_scaling_interface_0_0_sim_netlist.v
 // Design      : design_1_scaling_interface_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -108,6 +108,7 @@ module design_1_scaling_interface_0_0
         .scaling(scaling));
 endmodule
 
+(* ORIG_REF_NAME = "scaling_interface" *) 
 module design_1_scaling_interface_0_0_scaling_interface
    (scaling,
     s00_axi_rdata,
@@ -186,6 +187,7 @@ module design_1_scaling_interface_0_0_scaling_interface
         .scaling(scaling));
 endmodule
 
+(* ORIG_REF_NAME = "scaling_interface_slave_lite_v1_0_S00_AXI" *) 
 module design_1_scaling_interface_0_0_scaling_interface_slave_lite_v1_0_S00_AXI
    (scaling,
     s00_axi_rdata,

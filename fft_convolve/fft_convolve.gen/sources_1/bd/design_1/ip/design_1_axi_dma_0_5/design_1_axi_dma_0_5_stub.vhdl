@@ -2,10 +2,10 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
--- Date        : Tue Dec  9 10:52:00 2025
--- Host        : eecs-digital-35 running 64-bit Ubuntu 24.04.3 LTS
+-- Date        : Tue Dec  9 14:06:54 2025
+-- Host        : eecs-digital-44 running 64-bit Ubuntu 24.04.3 LTS
 -- Command     : write_vhdl -force -mode synth_stub
---               /home/jhuang25/Documents/6.S965/6S965fp/fft_convolve/fft_convolve.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_5/design_1_axi_dma_0_5_stub.vhdl
+--               /home/aloy_ng/proj/6S965fp/fft_convolve/fft_convolve.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_5/design_1_axi_dma_0_5_stub.vhdl
 -- Design      : design_1_axi_dma_0_5
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xczu48dr-ffvg1517-2-e

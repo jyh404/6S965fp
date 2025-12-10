@@ -2,11 +2,11 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
--- Date        : Tue Dec  9 10:52:00 2025
--- Host        : eecs-digital-35 running 64-bit Ubuntu 24.04.3 LTS
+-- Date        : Tue Dec  9 14:06:54 2025
+-- Host        : eecs-digital-44 running 64-bit Ubuntu 24.04.3 LTS
 -- Command     : write_vhdl -force -mode funcsim -rename_top design_1_dma_prn_data_2 -prefix
---               design_1_dma_prn_data_2_ design_1_dma_prn_data_3_sim_netlist.vhdl
--- Design      : design_1_dma_prn_data_3
+--               design_1_dma_prn_data_2_ design_1_dma_prn_data_1_sim_netlist.vhdl
+-- Design      : design_1_dma_prn_data_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
 -- Device      : xczu48dr-ffvg1517-2-e
@@ -20623,7 +20623,7 @@ entity design_1_dma_prn_data_2 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of design_1_dma_prn_data_2 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of design_1_dma_prn_data_2 : entity is "design_1_dma_prn_data_3,axi_dma,{}";
+  attribute CHECK_LICENSE_TYPE of design_1_dma_prn_data_2 : entity is "design_1_dma_prn_data_1,axi_dma,{}";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of design_1_dma_prn_data_2 : entity is "yes";
   attribute x_core_info : string;

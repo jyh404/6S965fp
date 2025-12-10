@@ -1,6 +1,4 @@
 vhdl xil_defaultlib  \
-"../../../bd/design_1/ip/design_1_fft_convolve_0_2/src/cmpy_0/sim/cmpy_0.vhd" \
-"../../../bd/design_1/ip/design_1_fft_convolve_0_2/src/xfft_4096/sim/xfft_4096.vhd" \
 "../../../bd/design_1/ip/design_1_axi_dma_0_5/sim/design_1_axi_dma_0_5.vhd" \
 "../../../bd/design_1/ip/design_1_dma_prn_data_0/sim/design_1_dma_prn_data_0.vhd" \
 "../../../bd/design_1/ip/design_1_dma_prn_data_1/sim/design_1_dma_prn_data_1.vhd" \
@@ -10,6 +8,8 @@ vhdl xil_defaultlib  \
 "../../../bd/design_1/ip/design_1_axi_smc_7/bd_0/ip/ip_1/sim/bd_6d82_psr_aclk_0.vhd" \
 "../../../bd/design_1/ip/design_1_rst_ps8_0_99M_6/sim/design_1_rst_ps8_0_99M_6.vhd" \
 "../../../bd/design_1/ip/design_1_axi_smc_1_7/bd_0/ip/ip_1/sim/bd_6a39_psr_aclk_0.vhd" \
+"../../../bd/design_1/ip/design_1_fft_convolve_0_3/src/cmpy_0/sim/cmpy_0.vhd" \
+"../../../bd/design_1/ip/design_1_fft_convolve_0_3/src/xfft_4096/sim/xfft_4096.vhd" \
 
 # Do not sort compile order
 nosort
